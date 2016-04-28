@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>ARG</title>
+<link rel="shortcut icon" type="image/x-icon" href="styles/images/icon_logo.png" />
+<link href="styles/super_layout.css" rel="stylesheet" type="text/css" />
+<link href="styles/base.css" rel="stylesheet" type="text/css" />
+<link href="styles/left_nav.css" rel="stylesheet" type="text/css" />
+<link href="styles/prim_nav_admin.css" rel="stylesheet" type="text/css" />
+<link href="styles/dimensions.css" rel="stylesheet" type="text/css" />
+<link href="styles/buttons.css" rel="stylesheet" type="text/css" />
+<link href="styles/components.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styles/modal.css" />
+<link href="styles/arg.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styles/global.css" />
+<script src="library/jquery_1.4.js" type="text/javascript"></script>	
+<script src="library/blockUI.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/tinymce/tiny_mce.js" language="javascript"></script>
+<script language="javascript" src="js/views.js" ></script>
+<script type="text/javascript" src="js/interaction.js"></script>
+<script src="library/editinplace.js" language="javascript"></script>
+<script type="text/javascript">
+function tiny(){
+	tinyMCE.init({
+		mode : "textareas",
+		theme : "simple"
+	});
+}
+</script>
+<script type="text/javascript">
+   $(document).ready(function(){
+							  
+	  // modal window for adding response
+	      add_response();
+      
+	  // modal window for editing response
+		 edit_response();
+
+	  //slide up and down	
+		leftnav_slide();
+
+      //clear search
+     	sear_blur();
+	  
+	  //scroll down for the right nav argument page
+         arg_slide();	
+		
+	  //code for unblock ui including button and close img
+	    unblock_ui();
+	
+		});
+</script>
+<!--[if lte IE 7]> 
+<style>
+	.app .main_bars ul.long_bars li.dwn_bar{margin-top:-4px}
+</style>
+<![endif]-->
+
+<!--[if lte IE 8]> 
+<style>
+	.app .mod_add .res_hgt{ height:150px}
+</style>
+<![endif]-->
+
+</head>
+<body class="app header_true">
+<script>
+$.header({index:2});
+</script>
+   <div id="contentarea" class="contentarea">
+          <div id="cont_box" class="contentarea leftcontent_true">
+                  <div id="left_nav" class="left_content contentarea controlbar_true header_true">
+                     <div id="ac_heading" class="catgs">Categories</div>
+                         <div class="contentarea">    <!--Place the left content of the page here -->
+                            <ul class="parent_nav tall_nav contentarea" >
+                                <!--<li class="sub_head has_children">
+                                   <a href="#"><img class="arr" height="10" width="10" src="styles/images/spacer.gif"/>All Categories</a>
+                                   <ul class="slide" style="display:none;">
+                                      <li><a class="arg_nav active_nav" href="#">Beauty Club Cards</a></li>
+                                   </ul>
+                                   <div class="bot_sep"></div>
+                                </li>-->
+                               <li class="sub_head has_children">
+                                 <a href="#">Closing Responses</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="#">Donation Requests</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="#" class="active_nav">Employee Inquiries</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="#">Gift Cards CS Complaints Sent</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="#">Hair Color Advice</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="#">International Shipping</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                           </ul>   
+                        </div> <!-- Left content-->
+                        <div class="controlbar">     <!--Place the buttons,pagination,etc  here -->
+                     <!--       Left control-bar-->
+                        </div>
+                  </div>
+                  <div class="right_content contentarea header_true controlbar_true">
+                        <div id="ac_heading" class="header"> <!--Place the right header content here -->
+                            <div id="search_ac">
+                           <div class="search_left"></div>
+                           <input class="text search blur" type="text" value="Search.." title="Search.." />
+                           <div class="search_right"></div>
+                        </div>
+                        <a class="btn fr mod_res">
+                            <span class="inner-btn">
+                                <span class="label"><img class="small_plus_icon" height="16" width="16" src="styles/images/spacer.gif"/>
+                                Add Response
+                                </span>
+                            </span>
+                        </a>
+                            <h4>Responces - Employee Inquiries</h4>
+                            <div style="clear:right;"></div>
+                        </div>
+                           <div class="contentarea">
+                              <div class="main_bars">
+                                  <ul class="long_bars">
+                                     <li class="sub_bars">
+                                           <div class="fst_bar">
+                                               <img class="arr" height="10" width="10" src="styles/images/spacer.gif" />When any Employees/ex-employees send an HR-related complaint
+                                           </div>
+                                           <div class="scnd_bar">
+                                               <a class="edit edit_mod_arg" href="#">
+                                                  <img class="edit_ico" width="10" height="10" src="styles/images/spacer.gif" />
+                                                  Edit
+                                               </a>
+                                               <a class="delete_a" href="#">
+                                                  <img class="delete_ico" width="16" height="16" src="styles/images/spacer.gif" />
+                                               </a>
+                                           </div>
+                                       </li>  
+                                       <li class="dwn_bar" style="display:block;">
+                                           <div class="desc_expand" style="position:relative;">
+                                               <!--<textarea name="tinymce"></textarea>-->
+                                                <p class="mar_pad">Hello *****,</p>
+                                                <p class="mar_pad"> Unfortunately, we are unable to assist you with this inquiry through our Customer Service system. Please call the Company provided toll-free Employee Complaint Line ("ECL") 1-800-241-5689. The ECL will be staffed by a third-party service, which will take your information. You do not have to leave your name.
+                                                </p>
+                                                <p class="mar_pad">Sincerely,</p>
+                                                <p class="mar_pad">Sally Beauty Supply LLC</p>
+                                                <p class="mar_pad" style="padding-top:0">http://www.sallybeauty.com,</p>
+                                           </div>
+                                       </li>
+                                  </ul>
+                              </div> 
+                            <!-- <div id="dialog" title="Dialog Title">Do you really want to do delete?</div>   -->
+                           </div>                        
+                        <div class="controlbar">     <!--Place the buttons,pagination,etc  here -->
+                          <!--  Right control-bar-->
+                        </div>
+                  </div>
+          </div>  
+    </div>
+    
+
+
+<div class="mod_add res_box" style="display:none">
+
+ <!--[if lte IE 8]> 
+       <div class="s s_t_l"></div><div class="s s_t_m"></div><div class="s s_t_r"></div>
+	   <div class="m s_m_l second_midhgt"></div><div class="m s_m_r  second_midhgt"></div>
+	   <div class="s s_b_l"></div><div class="s s_b_m"></div><div class="s s_b_r"></div>
+ <![endif]-->
+    
+    <div class="mod_head">
+        <span class="fl pad_left">Add Response</span>
+        <a class="fr close_but cross close_ui"><img src="styles/images/spacer.gif" width="16" height="16"  /></a>
+      <div style="clear:both"></div>
+    </div>
+    <div class="mod_cnt">
+    <div style="margin-top:20px;text-align:left">
+        
+        <div class="fl width160"><span class="star">*</span><label for="category">Categorie:</label></div>
+        <div class="fl"> 
+            <select class="sel">
+                <option> In Store </option>
+                <option> 1 </option>
+                <option> 2 </option>
+                <option> 3 </option>
+                <option> 4 </option>
+            </select>
+         </div>
+        <div style="clear:both" class="clr_all"></div>
+        <div class="fl width160"><span class="star">*</span><label for="title">Title:</label></div>
+        <div class="fl"><input type="text" name="" value="" id="title" /></div>
+        <div style="clear:both"></div>
+        <div class="fl width160 res_hgt"><span class="star">*</span><label for="">Response:</label></div>
+        <div class="fl">
+                 <textarea name="tinymce" class="text_top"></textarea>
+        </div>
+        <div style="clear:both"></div>
+        <div class="fl width160 inc_hgt"><label for="">Incidental notes:</label></div>
+        <div class="fl">
+                 <textarea name="tinymce" class="text_bot"></textarea>
+        </div>
+        <div style="clear:both" class="clr_all"></div>
+    </div>
+    </div>
+    <div class="mod_foot">
+        <span class="padleft_canc">
+            <a id="cancel_btn" class="btn cross">
+                <span class="inner-btn">
+                    <span class="label">Cancel</span>
+                </span>
+            </a>
+         </span>
+         <span class="padleft_add">
+             <a id="save_btn" class="nblu_btn">
+                <span class="inner-btn">
+                    <span class="label edit_cng">Add</span>
+                </span>
+            </a>
+          </span>
+     </div>
+
+</div>
+    
+</body>
+</html>

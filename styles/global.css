@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+.app .fourth_box {
+	left:500px;
+	top:250px;
+}
+
+
+.app .form_bars > li.tog_desc .bar_label img{
+	background:url("images/icons_sprite.png") repeat scroll 0 -304px transparent;}
+	

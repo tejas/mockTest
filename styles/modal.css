@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* CSS Document */
+
+.blockUI { width:100%;height:100%}
+
+
+.app .mod_box,.app .mod_add{
+   position: relative;
+   -moz-box-shadow: 0 0 15px #000;
+   -webkit-box-shadow: 0 0 15px #000;
+   box-shadow:0 0 15px #000;
+   background:#f7f7f7;
+   -moz-border-radius:2px;
+   -webkit-border-radius:2px;
+} 
+.app .star{ color:#e22929;padding:2px;}
+
+.app .clr_all{ height:0}
+
+.app .mod_box{ width: 350px;}
+
+.app .mod_add{width:760px;}
+
+.app .first_box{ margin:0 auto;top:200px }
+
+.app .second_box{ margin:0 auto;top:200px}
+
+.app .third_box{ margin:0 auto;top:200px}
+
+.app .res_box{ margin:0 auto;top:100px } /*styles for adding the Response in the Arg Page*/
+
+.app .mod_pool , .app .mod_contact , .app .mod_subj{margin:0 auto;top:200px}
+
+
+
+
+.app .mod_box .mod_head , .app .mod_add .mod_head{
+	height:30px;
+	background: transparent url(images/bgsprite.png) repeat-x 0 -708px;
+	line-height:30px;
+	color: #7d8da0;
+	text-shadow: 0 1px 0 #fff;
+	font-size: 15px;
+    font-weight: bold;
+	border-bottom: 1px solid #a3adb9;
+	-moz-border-radius:2px 2px 0 0;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+}
+.app .mod_box .mod_head .pad_left,.app .mod_add .mod_head .pad_left{padding-left:10px;}
+
+.app .mod_box .mod_head .cross,.app .mod_add .mod_head .cross{ margin:5px 10px 0 0}
+
+.app .mod_box a.close_but , .app .mod_add a.close_but{background: url(images/icons_sprite.png) no-repeat -2px -592px;}
+
+.app a:hover.close_but{background-position: 0 -608px;}
+
+.app a:active.close_but{background-position: 0 -626px;}
+
+.app .mod_box .width150{width:150px;height:40px;padding-left:10px;line-height:22px}
+
+.app .mod_add .width160{width:160px;height:35px;padding-left:15px;line-height:22px}
+
+.app .mod_box .mod_cnt label{color:#4f4f4f;}
+
+.app .mod_box .mod_cnt input , .app .mod_box .mod_cnt .sel{width:160px;color:#565b5e;border:1px solid #c0c1c2;padding:2px;}
+
+.app .mod_box .mod_cnt .sel{width:166px;}
+
+.app .mod_add .mod_cnt input , .app .mod_add .mod_cnt .sel{width:280px;color:#565b5e;border:1px solid #c0c1c2;padding:2px;}
+
+.app .mod_add .mod_cnt .sel{width:180px;}
+
+.app .mod_add .mod_cnt .text_top , .app .mod_add .mod_cnt .text_bot{ width:472px;border:1px solid #C0C1C2}
+
+.app .mod_add .mod_cnt .text_top{height:150px;}
+
+.app .mod_add .mod_cnt .text_bot{ height:100px;}
+
+.app .mod_add .res_hgt{ height:180px}
+
+.app .mod_add .inc_hgt{height:120px;}
+
+.app .mod_box .mod_foot{text-align:left;padding:14px 0 10px;}
+
+.app .mod_add .mod_foot{ text-align:left;}
+
+.app .mod_add .mod_foot{padding:30px 0 10px;}
+
+.app .mod_box .mod_foot .pad_right{padding-right:70px;padding-left:10px}
+
+.app .mod_add .mod_foot .padleft_canc{ padding-left:10px}
+
+.app .mod_add .mod_foot .padleft_add{ padding-left:90px}
+
+.app .s{
+	background: transparent url("images/shadows.png") no-repeat 0 0;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+}
+.app .s_t_l{
+	background-position: 0 0;
+	top: -10px;
+	left: -10px;
+}
+.app  .s_t_r{
+	background-position: 0 -21px;
+	top: -10px;
+	right: -10px;
+}
+.app  .s_b_l{
+	background-position: 0 -65px;
+	bottom: -10px;
+	left: -10px;
+}
+.app .s_b_r{
+	background-position: 0 -42px;
+	bottom: -10px;
+	right: -10px;
+}
+
+.app .s_t_m{
+	background-position: 0 -88px;
+	background-repeat: repeat-x;
+	width: 340px;
+	top: -10px;
+	left: 5px;
+}
+
+.app .s_b_m{
+	background-position: 0 -103px;
+	background-repeat: repeat-x;
+	width: 340px;
+	/*bottom: -10px;*/
+	bottom: -18px;
+	left: 5px;
+}
+
+.app .m{
+	background: transparent url("images/shadows_v.png") repeat-y 0 0;
+	width: 9px;
+	height: 125px;
+	position: absolute;
+	top: 5px;
+}
+.app .s_m_l{
+	background-position: 100% 0;
+	left: -10px;
+}
+.app .s_m_r{
+	background-position: 0 0px;
+	right: -10px;
+}
+
+
+.app .mod_add .s_b_m , .app .mod_add .s_t_m{width: 750px; }
+
+.app .mod_add .m{ height: 457px;}
+
+.app .mod_subj .m{ height:129px;}
+
+
+
+.app .mod_box .first_midhgt{ height:174px; }
+.app .mod_box .second_midhgt{ height:214px;}
+.app .mod_box .third_midhgt{ height:254px;}
+

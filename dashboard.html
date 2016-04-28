@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>DashBoard Slider</title>
+	<link rel="shortcut icon" type="image/x-icon" href="styles/images/icon_logo.png" />
+    <link href="styles/super_layout.css" rel="stylesheet" type="text/css" />
+    <link href="styles/base.css" rel="stylesheet" type="text/css" />
+    <link href="styles/left_nav.css" rel="stylesheet" type="text/css" />
+    <link href="styles/prim_nav_admin.css" rel="stylesheet" type="text/css" />
+    <link href="styles/dimensions.css" rel="stylesheet" type="text/css" />
+    <link href="styles/dashboard_admin.css" rel="stylesheet" type="text/css" />
+     <script src="library/jquery_1.4.js" type="text/javascript"></script>
+     <script src="library/jquery_missingUi.js"></script>
+     <script language="javascript" src="js/views.js" ></script>
+     <script>
+// execute your scripts when the DOM is ready. this is a good habit
+$(function() {
+
+	// initialize scrollable
+	$("div.scrollable").scrollable();
+
+});
+</script>
+
+
+<!--<style type="text/css">.work_in_IE  th{ text-align: left;}</style>-->
+</head>
+
+<body class="app header_true">
+ <script>
+$.header();
+</script>    
+    <div id="contentarea" class="contentarea">
+           <div id="cont_box" class="contentarea">
+            <div class="middle"> 
+            <h3 class="task">What would you like to do today....</h3>
+            <div class="slider">
+                
+                 <div id="slider"> <!--Start of fields slider-->
+                       <ul class="button_text"> <!--Top Fields -->
+                          <li>
+                             <a href="#">
+                              <img class="edit" height="16" width="16" src="styles/images/spacer.gif"/>
+                               Edit
+                             </a>
+                         </li> 
+                         <li>
+                           <a href="#">
+                            <img class="close" height="16" width="16" src="styles/images/spacer.gif"/>
+                           </a>
+                     <!--<li style="clear:all"></li>-->
+                       </ul>
+                
+                
+                      <div class="inner_slider">  <!--Bottom Fields -->
+                
+                <a class="prevPage browse left disabled"></a>
+                
+                <!-- root element for scrollable -->
+                        <div class="scrollable">	
+                            
+                            <!-- root element for the items -->
+                            <div class="items">
+                                <!-- 1-5 -->
+                            <a href="#" class="image1"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Add Users</a>
+                            <a href="#" class="image2"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Add Reason code</a>
+                            <a href="#" class="image3"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Update Store Records</a>
+                            <a href="#" class="image4"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Edit Permissions</a>
+                            <a href="#" class="image5"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Edit a Ticket</a>
+                                
+                                <!-- 6-7 -->
+                                
+                            <!--<a href="#" class="image6"><img src="../BTC/styles/images/spacer.gif" width="46" height="46" /></a>
+                            <a href="#" class="image7"><img src="../BTC/styles/images/spacer.gif" width="46" height="46" /></a>
+                            <a href="#" class="image8"><img src="../BTC/styles/images/spacer.gif" width="46" height="46" /></a>
+                            <a href="#" class="image9"><img src="../BTC/styles/images/spacer.gif" width="46" height="46" /></a>	
+                            <a href="#" class="image10"><img src="../BTC/styles/images/spacer.gif" width="46" height="46" /></a>-->
+                            <a href="#" class="image1"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Add Users</a>
+                            <a href="#" class="image2"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Add Reason code</a>
+                            <a href="#" class="image3"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Update Store Records</a>
+                            <a href="#" class="image4"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Edit Permissions</a>
+                            <a href="#" class="image5"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" />Edit a Ticket</a>
+                               
+                               <!-- 6-7 -->  
+                             
+                             <a href="#" class="image11"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" /></a>
+                             <a href="#" class="image12"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" /></a>
+                             <a href="#" class="image13"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" /></a>
+                             <a href="#" class="image14"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" /></a>
+                             <a href="#" class="image15"><img class="img_reset" src="styles/images/spacer.gif" width="46" height="46" /></a>   
+                                
+                            </div> <!--End of div class named items-->
+                            
+                        </div>   <!--End of div class named scrollable-->
+                
+                <!-- "next page" action -->
+                <a class="nextPage browse right"></a>
+                
+                <br clear="all">
+                
+                </div>  <!--End of div class named inner_slider-->
+                </div>  <!--End of div id named slider-->
+
+
+
+
+
+   </div> <!--End of div class named slider-->
+                <ul class="tic_details">
+                 <li class="fl left_tab">
+                 <div id="ticketlist">
+                    <form method="post" action="" name="pooltickets">
+                        <div class="tickettable">
+                           <div class="act_tic">
+                             <span class="fl lock">
+                               <img src="styles/images/spacer.gif" width="16" height="16"  class="lock_img" />Active Tickets : 3
+                             </span>
+                             <span class="fr refresh"><a href="#" ><img src="styles/images/spacer.gif" width="16" height="16" /></a></span>
+                            </div>
+                             <div style="overflow:hidden;width:398px;height:33px">
+                              <table cellspacing="0" cellpadding="0" border="0" class="scroll" style="width: 398px;">
+                                   <thead>
+                                   <tr class="color">
+                                       <th class="border" style="width: 110px;">
+                                          User Name   
+                                       </th>
+                                       <th class="border" style="width: 140px;">
+                                          Pool name
+                                       </th>
+                                       <th class="border" style="width: 140px;">
+                                       User Type
+                                       </th>
+                                   </tr>
+                                   </thead>
+                                </table>
+                            </div>
+                           <div id="tab_scr" style="margin: 0px; padding: 0px; overflow: hidden;width: 398px;max-height:224px;overflow-y:scroll;">
+                           <table cellspacing="0" cellpadding="0" border="0" style="width: 398px;" class="scroll" id="viewfonts_table">
+                                   <tbody>
+                                       <tr id="_empty" style="visibility: collapse;">
+                                           <td style="width: 110px; height: 0px;"/>
+                                           <td style="width: 140px; height: 0px;"/>
+                                           <td style="width: 140px; height: 0px;"/>
+                                       </tr>
+                                      <tr id="2" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                             <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>  <tr id="3" class="">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td title="">Tonya Davis</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                           <td title="">000000095782</td>
+                                           <td title="">05-12-2009,7.30PM</td>
+                                           <td>Tonya Davis</td>
+                                       </tr>
+                                       </tr>
+                                   </tbody>
+                           </table>
+                           </div>
+                        </div> 
+                       </form>
+                      </div>
+                  </li>
+                  
+                  
+                   <li class="fl right_tab">
+                  <div id="ticketlist">
+                    <form method="post" action="" name="pooltickets">
+                        <div class="tickettable">
+                           <div class="act_tic">
+                             <span class="fl user_det">
+                               <img src="styles/images/spacer.gif" width="16" height="16"  class="user_img" />Users Logged in : 3
+                             </span>
+                             <span class="fr refresh"><a href="#"><img src="styles/images/spacer.gif" width="16" height="16" /></a></span>
+                            </div>
+                            <div style="overflow:hidden;width:398px;height:33px">
+                              <table cellspacing="0" cellpadding="0" border="0" class="scroll" style="width: 398px;">
+                                   <thead>
+                                   <tr class="color">
+                                       <th class="border" style="width: 110px;">
+                                          User Name   
+                                       </th>
+                                       <th class="border" style="width: 140px;">
+                                          Pool name
+                                       </th>
+                                       <th class="border" style="width: 140px;">
+                                       User Type
+                                       </th>
+                                   </tr>
+                                   </thead>
+                                </table>
+                            </div>
+                            
+                           <div style="margin: 0px; padding: 0px; overflow: hidden; height: auto; width: 398px;max-height:224px;overflow-y:scroll;">
+                           <table cellspacing="0" cellpadding="0" border="0" style="width: 398px;" class="scroll" id="viewfonts_table">
+                                   <tbody>
+                                       <tr id="_empty" style="visibility: collapse;">
+                                           <td style="width: 110px; height: 0px;"/>
+                                           <td style="width: 140px; height: 0px;"/>
+                                           <td style="width: 140px; height: 0px;"/>
+                                       </tr>
+                                      <!-- <tr id="1" class="color" >
+                                           <td title="" class="border">User Name</td>
+                                           <td title="" class="border">Pool name</td>
+                                           <td title="" class="border">User Type</td>
+                                       </tr>-->
+                                       <tr id="2" class="alt">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="3" class="">
+                                           <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                       <tr id="4" class="alt">
+                                            <td title="">Tonya Davis</td>
+                                           <td title="">Quickship....</td>
+                                           <td>SSG Manager</td>
+                                       </tr>
+                                   </tbody>
+                           </table>
+                           </div>
+                        </div> 
+                       </form>
+                      </div>
+                  </li>
+            
+               </ul>
+
+           </div>
+            </div> <!--End of div contbox-->
+          </div> <!--End of div contentarea-->
+    
+</body>
+</html>

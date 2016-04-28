@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Subjects</title>
+<link rel="shortcut icon" type="image/x-icon" href="styles/images/icon_logo.png" />
+<link href="styles/super_layout.css" rel="stylesheet" type="text/css" />
+<link href="styles/base.css" rel="stylesheet" type="text/css" />
+<link href="styles/left_nav.css" rel="stylesheet" type="text/css" />
+<link href="styles/prim_nav_admin.css" rel="stylesheet" type="text/css" />
+<link href="styles/dimensions.css" rel="stylesheet" type="text/css" />
+<link href="styles/buttons.css" rel="stylesheet" type="text/css" />
+<link href="styles/components.css" rel="stylesheet" type="text/css" />
+<link href="styles/forms.css" rel="stylesheet" type="text/css" />
+<link href="styles/custom.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styles/modal.css" />
+<link href="styles/subjects.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styles/global.css" />
+<script src="library/jquery_1.4.js" type="text/javascript"></script>
+<script src="library/jquery_missingUi.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/interaction.js"></script>
+<script src="library/blockUI.js" type="text/javascript"></script>
+<script language="javascript" src="js/views.js" ></script>
+
+<script type="text/javascript">
+$(document).ready(function() { 
+   
+        //slide up and down	
+		leftnav_slide(); 
+		
+	    //subject tabs
+		 subj_rgtab();
+		 
+		 //Adding subject modal window
+		 add_subject();
+		 
+		 //Adding subject modal window
+		 edit_subject();
+		
+		 //code for unblock ui including button and close img
+		 unblock_ui();
+	
+});
+</script>
+
+</head>
+<body class="app header_true">
+<script>
+$.header({index:5});
+</script>     
+    <div id="contentarea" class="contentarea">
+          <div id="cont_box" class="contentarea leftcontent_true">
+                  <div id="left_nav" class="left_content contentarea controlbar_true">
+                        <div class="contentarea">   
+                           <ul class="parent_nav tall_nav contentarea" >
+                                <li class="sub_head has_children">
+                                   <a href="#"><img class="arr" id="drill1" height="10" width="10" src="styles/images/spacer.gif"/>Departments</a>
+                                   <ul style="display:none;">
+                                      <li><a class="arg_nav" href="#">Ivie Pools</a></li>
+                                      <li><a class="arg_nav" id="sally" href="pools.html">Sally Pools</a></li>
+                                   </ul>
+                                   <div class="bot_sep"></div>
+                                </li>
+                               <li class="sub_head has_children">
+                                 <a href="#"><img class="arr" id="drill2" height="10" width="10" src="styles/images/spacer.gif"/>Stores</a>
+                                      <!--<ul>
+                                           <li><a class="arg_nav rdate">Store Master Lists</a></li>
+                                           <li><a class="arg_nav rdate">Update Store Info</a></li>
+                                      </ul>-->
+                                      <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="contacts.html"><img class="arr" id="drill3" height="10" width="10" src="styles/images/spacer.gif"/>Contact Methods</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children" >
+                                   <a href="subjects.html" class="active_nav"><img class="" height="10" width="10" src="styles/images/spacer.gif"/>Web Forms</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="#"><img class="arr" height="10" width="10" src="styles/images/spacer.gif"/>Appearance Settings</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                           </ul>   
+                        </div>
+                        <div class="controlbar">     
+
+                        </div>
+                  </div>
+                  <div class="right_content contentarea header_true controlbar_true">
+                        <div id="active_right_right_header" class="header"> <!--Place the right header content here -->
+                             <ul class="horizontal_tab">
+                            	<li><a href="#" rel="aaa">Subject Field</a></li>
+                                <li><a href="#" class="" rel="bbb">Subject</a></li>
+                               
+                            </ul>                               
+                        </div>
+                       <div class="contentarea top_sep" id="active_right_right_contentarea">   <!--Place the right content of the page here -->
+                                <!--Right content-->
+                                
+                                <div class="aa" id="aaa" >
+                                  
+                                       <div id="" class="header sub_bg"> <!--Place the right header content here -->
+                                            
+                                          <a id="cancel_btn" class="btn fr mod_sub">
+                                               <span class="inner-btn">
+                                                 <span class="label">Add Subject</span>
+                                               </span>
+                                           </a>
+                                                
+                                       </div>
+                                                    
+                                  <!-- <div class="subj_tab" id="" style="position:absolute;left:50%; margin-left:-300px;margin-top:50px;">   -->    
+                                  <div class="subj_tab" id="" style="margin:50px">                                  
+                                     
+                                        <ul class="headings">
+                                            <li class="heading_1">Subjects</li>
+                                            <li class="heading_1">Date Added</li>
+                                            <li class="heading_2">Edit</li>
+                                        </ul>  
+                                        <ul class="form_bars">
+                                            <li class="sub_list">
+                                                <div class="bar_label">
+                                                    <span class="pool_name_label">E-mail Direct</span>
+                                                </div>
+                                                <div class="bar_tools">
+                                                    <span class="ai_status a fl">05-12-2009,7.30PM</span>
+                                                </div>  
+                                                <div class="modify">
+                                                	<a class="edit edit_mod_sub" href="#"><img class="edit_ico" width="16" height="16" src="styles/images/spacer.gif"/></a>
+                                                </div>
+                                            </li>
+                                            <li class="sub_list">
+                                                <div class="bar_label">
+                                                    <span class="pool_name_label">Online Shopping Inquiry</span>
+                                                </div>
+                                                <div class="bar_tools">
+                                                    <span class="ai_status a fl">05-12-2009,7.30PM</span>
+                                                </div> 
+                                                <div class="modify">
+                                                	<a class="edit edit_mod_sub" href="#"><img class="edit_ico" width="16" height="16" src="styles/images/spacer.gif"/></a>
+                                                </div> 
+                                            </li>
+                                            <li class="sub_list">
+                                                <div class="bar_label">
+                                                    <span class="pool_name_label">Sally and Inquiry</span>
+                                                </div>
+                                                <div class="bar_tools">
+                                                    <span class="ai_status a fl">05-12-2009,7.30PM</span>
+                                                </div>  
+                                                <div class="modify">
+                                                	<a class="edit edit_mod_sub" href="#"><img class="edit_ico" width="16" height="16" src="styles/images/spacer.gif"/></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                       
+                                     </div>
+                                </div><!--End of first tab-->
+                                 <div class="aa" id="bbb">
+                                     <div id="" class="header sub_bg"> <!--Place the right header content here -->
+                                          <a style="" id="cancel_btn" class="btn fr">
+                                               <span class="inner-btn">
+                                               <span class="label">Add Subject</span>
+                                               </span>
+                                           </a>
+                                                
+                                     </div>
+                                     
+                                     <div class="" id="" style="margin:100px;">
+                                         <h1> Future Entries </h1>
+                                     </div>
+                                </div><!--End of second tab-->
+                        </div><!--End of right content area-->
+                        <div class="controlbar">     <!--Place the buttons,pagination,etc here -->
+                          <!--  Right control-bar-->
+                        </div>
+                  </div>
+          </div>  
+    </div>
+ 
+    <!-- pop-up for Add subject-->  
+
+<div class="mod_box mod_subj" style="display:none">
+<!--[if lte IE 8]> 
+       <div class="s s_t_l"></div><div class="s s_t_m"></div><div class="s s_t_r"></div>
+	   <div class="m s_m_l"></div><div class="m s_m_r"></div>
+	   <div class="s s_b_l"></div><div class="s s_b_m"></div><div class="s s_b_r"></div>
+<![endif]-->
+    
+    <div class="mod_head">
+        <span class="fl pad_left">Add Subject</span>
+        <a class="fr close_but cross close_ui"><img src="styles/images/spacer.gif" width="16" height="16"  /></a>
+        <div style="clear:both" class="clr_all"></div>
+    </div>
+    <div class="mod_cnt">
+    <div style="margin-top:20px;text-align:left">
+        <div class="fl width150"><label for="subject">Subject:</label></div>
+        <div class="fl"><input type="text" name="" value="" id="subject" /></div>
+        <div style="clear:both" class="clr_all"></div>
+
+        
+       
+    </div>
+    </div>
+    <div class="mod_foot">
+        <span class="pad_right">
+            <a id="cancel_btn" class="btn cross">
+                <span class="inner-btn">
+                    <span class="label">Cancel</span>
+                </span>
+            </a>
+        </span>
+        <a id="save_btn" class="nblu_btn">
+            <span class="inner-btn">
+            	<span class="label edit_cng">Add</span>
+            </span>
+        </a>
+    </div>
+
+</div>
+   
+<!--end pop-up for Add subject-->
+</body>
+</html>

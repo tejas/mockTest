@@ -1,0 +1,142 @@
+/* @group Left Nav */
+#left_nav{
+	padding:0;
+}
+.app #left_nav h3.header{
+	background: url(images/mail_assets.png) repeat-x 0 -1420px;
+	height: 20px;
+	overflow: hidden;
+	margin: 0;
+	color: #444;
+	font-size: 14px;
+	line-height: 15px;
+	font-weight: bold;
+	padding: 6px 2px 4px 6px;
+	text-shadow: #ececec 0 1px 0;
+}
+.app .parent_nav{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x:hidden;
+	overflow-y: auto;
+	overflow: scroll !ie;
+	list-style: none;
+}
+/*When Control bar is present*/
+.app .control_bar_true .parent_nav{
+	position: absolute;
+	top: 4px;
+	bottom: 31px;
+	margin: 0;
+	overflow: auto;
+	border-bottom: 1px solid #aaa ;
+}
+
+/*When Header is enabled*/
+.app .parent_nav li{
+	margin-bottom: 5px;
+}
+.app  .parent_nav li a{
+	padding: 4px 6px 6px 4px;
+	cursor: default;
+	display: block;
+	/*color: #666;*/
+	color:#40474d;
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	text-shadow: #efefe 0 1px 0;
+}
+
+.app .parent_nav li a:hover, .app .parent_nav.tall_nav li a.active_nav{
+    background:url(images/bgsprite.png) repeat-x 0 -476px; 
+	text-decoration: none;
+	color: #fff;
+	text-shadow: #686868 0 1px 0;
+}
+.app .parent_nav li a.active_nav, .app .parent_nav li.i a{
+	background:url(images/bgsprite.png) repeat-x 0 -476px;
+	color: #fff;
+	text-shadow: #575757 0 1px 0;
+}
+.app .left_content_rc .parent_nav li:hover,.app .center_content_rc .parent_nav li:hover,
+.app .parent_nav.tall_nav li:hover a.active_nav{
+ background:url(images/bgsprite.png) repeat-x 0 -476px; 
+ text-decoration: none;
+ color: #fff;
+ text-shadow: #686868 0 1px 0;
+}
+
+
+/*taller navs*/
+.app  .parent_nav.tall_nav li a, .app  .parent_nav.tall_nav li.has_children a{
+	height: 16px;
+	padding: 9px;
+	line-height:15px;
+}
+.app .parent_nav.tall_nav li.has_children a.arg_nav, .app .parent_nav.tall_nav li.has_children > ul > li > a{
+	padding-left: 16px;
+}
+.app .parent_nav.tall_nav > li{
+/*	padding-bottom: 2px;*/
+	/*margin: -1px 0 0;*/
+	margin: -3px 0 2px;
+}
+.app .parent_nav.tall_nav > li.has_children{
+	/*padding-bottom: 2px;*/
+	margin: -3px 0 2px;
+}
+
+/*end*/
+
+/*active left nav*/
+.app .parent_nav li.has_children > a{
+	font-weight: bold;
+	color:#798ea9;
+	text-shadow: #f5f5f5 0px 1px 0px;
+}
+.app .parent_nav li.has_children > a:hover{
+	color: #fff;
+	text-shadow: #000000 0px 1px 0px;
+}
+
+.app .parent_nav li.has_children a{
+	padding-left: 3px;
+}
+.app .has_children a .arr{
+	background: url(images/icons_sprite.png) 0 -318px;
+	float: left;
+	cursor: default;
+	margin-top: 3px;
+	margin-top:2px !ie;
+	width: 10px;
+	margin-right: 2px;
+	height: 10px;
+	display: inline;
+}
+
+.app .has_children a.active_nav .arr {
+	background:url("images/icons_sprite.png") repeat scroll 0 -578px transparent;
+	margin-right:4px;}
+
+.app .has_children a .collapse{
+	background: url(images/icons_sprite.png) 0 -305px;
+}
+.app .parent_nav .has_children ul{
+	margin-bottom: 10px;
+}
+.app .parent_nav .has_children ul li a{
+	font-size: 12px;
+	line-height: 16px;
+	height: 16px;
+	padding: 5px;
+}
+.app .parent_nav .has_children .bot_sep{
+	background:url(images/icons_sprite.png) repeat-x 0 -497px;
+	height: 2px;
+}
+/*end*/
+
+

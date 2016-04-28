@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Reason Codes</title>
+<link rel="shortcut icon" type="image/x-icon" href="styles/images/icon_logo.png" />
+<link href="styles/super_layout.css" rel="stylesheet" type="text/css" />
+<link href="styles/base.css" rel="stylesheet" type="text/css" />
+<link href="styles/left_nav.css" rel="stylesheet" type="text/css" />
+<link href="styles/forms.css" rel="stylesheet" type="text/css" />
+<link href="styles/custom.css" rel="stylesheet" type="text/css" />
+<link href="styles/prim_nav_admin.css" rel="stylesheet" type="text/css" />
+<link href="styles/components.css" rel="stylesheet" type="text/css" />
+<link href="styles/buttons.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styles/modal.css" />
+<script src="library/jquery_1.4.js" type="text/javascript"></script>
+<script src="library/jquery_missingUi.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/interaction.js"></script>
+<script language="javascript" src="js/views.js" ></script>
+<script src="library/blockUI.js" type="text/javascript"></script>
+<script type="text/javascript">
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+						   
+			   //edit categories
+			    edit_cat();
+				
+			   //edit sub categories
+				edit_subcat();
+				
+			   //active and inactive toggle buttons
+				act_inact_but();
+				
+				//edit reason code
+				reason_code();
+				
+				//script for active/inactive tabs
+				act_inact_hftab();
+			
+				//clear search
+     	       	sear_blur();
+		       
+			   //search box background
+			    sear_bg();
+				
+			  //modal add category	
+                add_category();
+				
+			  //modal add sub-category	
+				 add_subcategory();
+				 
+			   //modal add reasoncode
+				 add_reasoncode(); 
+				 
+				//call for unblock ui including button and close img
+				unblock_ui();
+				
+ 
+});
+</script>
+</head>
+<body class="app header_true">
+<script>
+$.header({index:1});
+</script> 
+    <div id="contentarea" class="contentarea">
+          <div id="cont_box" class="contentarea leftcontent_true">
+                  <div id="left_nav" class="left_content_rc header_true contentarea controlbar_true level1 content_rc">
+                        <div class="header">
+                            <ul class="header">
+                               <li><h3>Categories</h3></li>
+                               <li>
+                                  <a href="#" class="add_mod_cat"><img class="plus_icon" width="16" height="16" src="styles/images/spacer.gif"/></a>   
+                                    <div id="search_ac">
+                                       <div class="search_left"></div>
+                                       <input class="text search blur" type="text" value="Search.." title="Search.." />
+                                       <div class="search_right"></div>
+                                   </div>
+                               </li>
+                            </ul>
+                        </div>
+                        <div class="contentarea" id="top_style">   
+                           <ul class="parent_nav tall_nav contentarea" >
+                               <li class="sub_head has_children">
+                                   <a href="#">
+                                               <img class="arr fr" height="10" width="10" src="styles/images/spacer.gif"/><span class="categ">All<span class="count">(84)</span></span>
+                                               <img height="16" width="16" src="styles/images/spacer.gif" class="pencil fl" id="edit_pen_cat"/>
+                                   </a>
+                               </li>
+                               <li class="sub_head has_children">
+                                  
+                                  <a href="#">
+                                       <img class="arr fr" height="10" width="10" src="styles/images/spacer.gif"/><span class="categ">Beauty Club Card<span class="count">(7)</span></span>
+                                       <img height="16" width="16" src="styles/images/spacer.gif" class="pencil fl" id="edit_pen_cat"/>
+                                  </a>
+                             </li>
+                               <li class="sub_head has_children">
+                                   <a href="#"><img class="arr fr" height="10" width="10" src="styles/images/spacer.gif"/><span class="categ">Beauty Schools<span class="count">(6)</span>
+                                          </span>    <img height="16" width="16" src="styles/images/spacer.gif" class="pencil fl" id="edit_pen_cat"/>
+                                  </a>
+                               </li>
+                            </ul>   
+                        </div>
+                        <div class="controlbar">  
+                           <div class="act_btns">
+                                <a href="#" class="ac_btn actv act_bg">
+                                    <span class="inner_btn">
+                                        <span class="label">
+                                             Active
+                                        </span>
+                                    </span>
+                                </a>
+                                <a href="#" class="inac_btn inact_bg">
+                                    <span class="inner_btn">
+                                        <span class="label">
+                                             Inactive
+                                        </span>
+                                    </span>
+                                 </a>
+                           </div>
+                        </div>
+                  </div>
+                  <div class="center_content_rc contentarea header_true controlbar_true level2 content_rc">
+                       <div class="header">
+                            <ul class="header">
+                               <li><h3>Sub-Categories</h3></li>
+                               <li>
+                                  <a href="#" class="add_mod_subcat"><img class="plus_icon" width="16" height="16" src="styles/images/spacer.gif"/></a>   
+                                    <div id="search_ac">
+                                       <div class="search_left"></div>
+                                       <input class="text search blur" type="text" value="Search.." title="Search.." />
+                                       <div class="search_right"></div>
+                                   </div>
+                               </li>
+                            </ul>
+                        </div>
+                   
+                        <div class="contentarea" id="top_style">   
+                           <ul class="parent_nav tall_nav contentarea">
+                              <!-- <li class="sub_head has_children">
+                                  <a href="#">In Store<span class="count">(5)</span></a>
+                               </li>-->
+                               <div class="head">In Store<span class="count">(5)</span></div>
+                               <li class="sub_head has_children">
+                                    <a href="#">
+                                               <img class="arr fr" height="10" width="10" src="styles/images/spacer.gif"/><span class="categ">All<span class="count">(84)</span></span>
+                                               <img height="16" width="16" src="styles/images/spacer.gif" class="pencil fl" id="edit_pen_subcat"/>
+                                   </a>
+                               </li>
+                               <li class="sub_head has_children">
+                               
+                                 <a href="#"><img class="arr fr" height="10" width="10" src="styles/images/spacer.gif"/><span class="categ">Pricing<span class="count">(8)</span></span>
+                                               <img height="16" width="16" src="styles/images/spacer.gif" class="pencil fl" id="edit_pen_subcat"/>
+                                 </a>
+                                                              
+                                 
+                               </li>
+                               <li class="sub_head has_children">
+                               
+                               <a href="#">
+                                  <img class="arr fr" height="10" width="10" src="styles/images/spacer.gif"/><span class="categ">Product availability<span class="count">(6)</span></span>
+                                  <img height="16" width="16" src="styles/images/spacer.gif" class="pencil fl" id="edit_pen_subcat"/>
+                               </a>
+                                 
+                               </li>
+                            </ul>   
+                        </div>
+                        <div class="controlbar">     
+                            <div class="act_btns">
+                                <a href="#" class="ac_btn actv act_cenbg">
+                                    <span class="inner_btn">
+                                        <span class="label">
+                                             Active
+                                        </span>
+                                    </span>
+                                </a>
+                                <a href="#" class="inac_btn inact_cenbg">
+                                    <span class="inner_btn">
+                                        <span class="label">
+                                             Inactive
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="right_content_rc contentarea header_true controlbar_true level3 content_rc">
+                       <div class="header">
+                            <ul class="header">
+                               <li><h3>Reason Codes</h3></li>
+                               <li>
+                                  <a href="#" class="add_mod_rescode"><img class="plus_icon" width="16" height="16" src="styles/images/spacer.gif"/></a>   
+                                    <div id="search_ac">
+                                       <div class="search_left"></div>
+                                       <input class="text search blur" type="text" value="Search.." title="Search.." />
+                                       <div class="search_right"></div>
+                                   </div>
+                               </li>
+                            </ul>
+                        </div>
+                        <div class="contentarea" id="top_style">   
+                           <ul class="parent_nav tall_nav contentarea">
+                               <!--<li class="sub_head has_children">
+                                  <a href="#">Returns or Exchanges<span class="count">(6)</span></a>
+                               </li>-->
+                               <div class="head">Returns or Exchanges<span class="count">(6)</span></div>
+                               <li class="sub_head has_children">
+                                   <a href="#"><img src="styles/images/spacer.gif" width="16" height="16" class="penc fr" id="rsn_mod"/>Blades</a>
+                                 </li>
+                               <li class="sub_head has_children">
+                                  <a href="#"><span class="fl">Body Jewelry</span><span class="notes">Wants to return body jewelry</span><img src="styles/images/spacer.gif" width="16" height="16" class="penc fr"/></a>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="#"><img src="styles/images/spacer.gif" width="16" height="16" class="penc fr"/>Product availability</a>
+                               </li>
+                            </ul>   
+                        </div>
+                        <div class="controlbar">     
+                              <div class="act_btns">
+                                <a href="#" class="ac_btn actv act_lastbg">
+                                    <span class="inner_btn">
+                                        <span class="label">
+                                             Active
+                                        </span>
+                                    </span>
+                                </a>
+                                <a href="#" class="inac_btn inact_lastbg">
+                                    <span class="inner_btn">
+                                        <span class="label">
+                                             Inactive
+                                        </span>
+                                    </span>
+                                 </a>
+                              </div>
+                        </div>
+                  </div>
+          </div>  
+    </div>
+    
+<!--start of modal windows-->
+   <!--start of categories modal window-->
+      
+   <div class="mod_box first_box" style="display:none;">
+<!--[if lte IE 8]> 
+       <div class="s s_t_l"></div><div class="s s_t_m"></div><div class="s s_t_r"></div>
+	   <div class="m s_m_l first_midhgt"></div><div class="m s_m_r first_midhgt"></div>
+	   <div class="s s_b_l"></div><div class="s s_b_m"></div><div class="s s_b_r"></div>
+ <![endif]-->
+    
+    <div class="mod_head">
+        <span class="fl pad_left">Edit Categories</span>
+        <a class="fr close_but cross close_ui"><img src="styles/images/spacer.gif" width="16" height="16"  /></a>
+      <div style="clear:both" class="clr_all"></div>
+    </div>
+    <div class="mod_cnt">
+    <div style="margin-top:20px;text-align:left">
+        <div class="fl width150"><label for="category">Categorie name:</label></div>
+        <div class="fl"><input type="text" name="" value="" id="category" /></div>
+        <div style="clear:both" class="clr_all"></div>
+        <div class="fl width150"><label for="status">Status:</label></div>
+        <div class="fl">
+
+            <ul class="comp_ai active">
+                       <li>
+                    	 <input type="text" id="" value="" class="hide" />
+                       </li>
+                       <li class="selected f">
+                            <a class="notify" href="#">
+                                <span class="nav_r">
+                                     <span class="nav_label">Active</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="l">
+                            <a class="notify" href="#">
+                                <span class="nav_r">
+                                    <span class="nav_label">Inactive</span>
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+        <div style="clear:both" class="clr_all"></div>
+    </div>
+    </div>
+    <div class="mod_foot">
+    <span class="pad_right">
+        <a id="cancel_btn" class="btn cross">
+            <span class="inner-btn">
+            	<span class="label">Cancel</span>
+            </span>
+        </a>
+        </span>
+        <a id="save_btn" class="nblu_btn">
+            <span class="inner-btn">
+            	<span class="label edit_cng">Update</span>
+            </span>
+        </a>
+    </div>
+
+</div>
+        
+      
+   <!--end of categories modal window-->
+   
+   <!--start of sub-categories modal window-->
+
+ <div class="mod_box second_box" style="display:none;">
+
+ <!--[if lte IE 8]> 
+       <div class="s s_t_l"></div><div class="s s_t_m"></div><div class="s s_t_r"></div>
+	   <div class="m s_m_l second_midhgt"></div><div class="m s_m_r  second_midhgt"></div>
+	   <div class="s s_b_l"></div><div class="s s_b_m"></div><div class="s s_b_r"></div>
+ <![endif]-->
+    
+    <div class="mod_head">
+        <span class="fl pad_left">Edit Sub-Categories</span>
+        <a class="fr close_but cross close_ui"><img src="styles/images/spacer.gif" width="16" height="16"  /></a>
+      <div style="clear:both" class="clr_all"></div>
+    </div>
+    <div class="mod_cnt">
+    <div style="margin-top:20px;text-align:left">
+        <div class="fl width150"><label for="category">Categorie name:</label></div>
+        <div class="fl"> 
+            <select class="sel">
+                <option> In Store </option>
+                <option> 1 </option>
+                <option> 2 </option>
+                <option> 3 </option>
+                <option> 4 </option>
+            </select>
+         </div>
+        <div style="clear:both" class="clr_all"></div>
+        <div class="fl width150"><label for="sub_category">Sub-Categorie name:</label></div>
+        <div class="fl"><input type="text" name="" value="" id="sub_category" /></div>
+        <div style="clear:both" class="clr_all"></div>
+        <div class="fl width150"><label for="status">Status:</label></div>
+        <div class="fl">
+
+             <ul class="comp_ai active">
+                         <li>
+                        <input type="text" id="" value="" class="hide" />
+                        </li>
+                       <li class="selected f">
+                            <a class="notify" href="#">
+                                <span class="nav_r">
+                                     <span class="nav_label">Active</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="l">
+                            <a class="notify" href="#">
+                                <span class="nav_r">
+                                    <span class="nav_label">Inactive</span>
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+        <div style="clear:both" class="clr_all"></div>
+    </div>
+    </div>
+    <div class="mod_foot">
+    <span class="pad_right">
+        <a id="cancel_btn" class="btn cross">
+            <span class="inner-btn">
+            	<span class="label">Cancel</span>
+            </span>
+        </a>
+        </span>
+        <a id="save_btn" class="nblu_btn">
+            <span class="inner-btn">
+            	<span class="label edit_cng">Update</span>
+            </span>
+        </a>
+    </div>
+
+</div>
+
+   
+   <!--end of sub-categories modal window-->
+   
+   <!--start of reasoncodes modal window-->
+   
+   <div class="mod_box third_box" style="display:none;">
+   
+   <!--[if lte IE 8]> 
+       <div class="s s_t_l"></div><div class="s s_t_m"></div><div class="s s_t_r"></div>
+	   <div class="m s_m_l third_midhgt"></div><div class="m s_m_r third_midhgt"></div>
+	   <div class="s s_b_l"></div><div class="s s_b_m"></div><div class="s s_b_r"></div>
+ <![endif]-->
+    
+   
+    <div class="mod_head">
+        <span class="fl pad_left">Edit Reason Codes</span>
+        <a class="fr close_but cross close_ui"><img src="styles/images/spacer.gif" width="16" height="16"  /></a>
+      <div style="clear:both" class="clr_all"></div>
+    </div>
+    <div class="mod_cnt">
+    <div style="margin-top:20px;text-align:left">
+        <div class="fl width150"><label for="category">Categorie name:</label></div>
+        <div class="fl"> 
+            <select class="sel">
+                <option> In Store </option>
+                <option> 1 </option>
+                <option> 2 </option>
+                <option> 3 </option>
+                <option> 4 </option>
+            </select>
+         </div>
+        <div style="clear:both" class="clr_all"></div>
+        <div class="fl width150"><label for="category">Sub-Categorie name:</label></div>
+        <div class="fl">
+            <select class="sel">
+                <option> In Store </option>
+                <option> 1 </option>
+                <option> 2 </option>
+                <option> 3 </option>
+                <option> 4 </option>
+            </select>
+        </div>
+        <div style="clear:both" class="clr_all"></div>
+        <div class="fl width150"><label for="reason_code">Reason Code name</label></div>
+        <div class="fl"><input type="text" name="" value="" id="reason_code" /></div>
+        <div style="clear:both" class="clr_all"></div>
+        <div class="fl width150"><label for="status">Status:</label></div>
+        <div class="fl">
+
+              <ul class="comp_ai active">
+                        <li>
+                           <input type="text" id="" value="" class="hide" />
+                        </li>
+                       <li class="selected f">
+                            <a class="notify" href="#">
+                                <span class="nav_r">
+                                     <span class="nav_label">Active</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="l">
+                            <a class="notify" href="#">
+                                <span class="nav_r">
+                                    <span class="nav_label">Inactive</span>
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+        <div style="clear:both" class="clr_all"></div>
+    </div>
+    </div>
+    <div class="mod_foot">
+    <span class="pad_right">
+        <a id="cancel_btn" class="btn cross">
+            <span class="inner-btn">
+            	<span class="label">Cancel</span>
+            </span>
+        </a>
+        </span>
+        <a id="save_btn" class="nblu_btn">
+            <span class="inner-btn">
+            	<span class="label edit_cng">Update</span>
+            </span>
+        </a>
+    </div>
+
+</div>
+
+   
+   <!--end of reasoncodes modal window-->   
+<!--end of mo0dal window-->
+</body>
+</html>

@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+.app #delete_pool{
+   width: 412px;
+   height: 194px;
+   margin-left: 8px;
+   margin-top: 18px;
+}
+.app .modal_pol{
+   position: relative;
+   -moz-box-shadow: 0 0 10px #000;
+   -webkit-box-shadow: 0 0 10px #000;
+} 
+.app .total_pol{
+   bottom: 0;
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: -20px;
+   z-index: 90;
+}
+.app h4{
+   background: transparent url(images/bgsprite.png) repeat-x 0 -708px;
+   border-bottom: 1px solid #a3adb9;
+   color: #7d8da0;
+   display: block;
+   font-size: 15px;
+   font-weight: bold;
+   height: 18px;
+   margin-top: 20px;
+   padding: 6px 12px;
+   text-shadow: 0 1px 0 #fff;
+   width: 388px;
+}
+.app .cont_bg{
+   background: transparent url(images/pools_bg.png) repeat-x;
+   width: 412px;
+   height: 164px;
+   margin-top:-20px;
+}
+.app .mod_pol_cont{
+   bottom: 40px;
+   position: absolute;
+   left: 16px;
+   right: 16px;
+   top: 58px;
+}
+.app .pol_bot_btn{
+   background: transparent url(images/bgsprite.png) repeat-x 0 -745px;
+   bottom: 0;
+   left: 5px;
+   padding: 4px 0 4px 10px;
+   position: absolute;
+   right: 5px;
+}
+.app .pol_bot_btn .btn{
+   margin-left: 110px;	
+}
+
+
+
+

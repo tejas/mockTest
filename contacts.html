@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contact Methods</title>
+<link rel="shortcut icon" type="image/x-icon" href="styles/images/icon_logo.png" />
+<link href="styles/super_layout.css" rel="stylesheet" type="text/css" />
+<link href="styles/base.css" rel="stylesheet" type="text/css" />
+<link href="styles/left_nav.css" rel="stylesheet" type="text/css" />
+<link href="styles/forms.css" rel="stylesheet" type="text/css" />
+<link href="styles/custom.css" rel="stylesheet" type="text/css" />
+<link href="styles/prim_nav_admin.css" rel="stylesheet" type="text/css" />
+<link href="styles/buttons.css" rel="stylesheet" type="text/css" />
+<link href="styles/components.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styles/modal.css" />
+<link rel="stylesheet" type="text/css" href="styles/global.css" />
+<script src="library/jquery_1.4.js" type="text/javascript"></script>
+<script src="library/jquery_missingUi.js" type="text/javascript"></script>
+<script src="library/blockUI.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/interaction.js"></script>
+<script language="javascript" src="js/views.js" ></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+			
+			
+		//slide up and down	
+		leftnav_slide();
+		
+		//clear search
+     	sear_blur();
+		
+		//active and inactive toggle buttons
+		act_inact_but();
+				
+		//rightnav content drop down
+		//right_contarr();
+		
+		//Adding contact modal window
+		add_contact();
+		
+		//Adding contact modal window
+		//edit_contact();
+		
+		 //code for unblock ui including button and close img
+		 unblock_ui();
+		 
+	
+	});
+
+</script>
+</head>
+<body class="app header_true">
+<script>
+$.header({index:5});
+</script>   
+    <div id="contentarea" class="contentarea">
+          <div id="cont_box" class="contentarea leftcontent_true">
+                  <div id="left_nav" class="left_content contentarea controlbar_true">
+                        <div class="contentarea">   
+                           <ul class="parent_nav tall_nav contentarea" >
+                                <li class="sub_head has_children">
+                                   <a href="#"><img class="arr" height="10" width="10" src="styles/images/spacer.gif"/>Departments</a>
+                                    <ul class="slide" style="display:none;">
+                                          <li><a class="arg_nav" href="#">Ivie Pools</a></li>
+                                         <li><a class="arg_nav" id="sally" href="pools.html">Sally Pools</a></li>
+                                   </ul>
+                                   <div class="bot_sep"></div>
+                                </li>
+                                <li class="sub_head has_children">
+                                  <a href="contacts.html" class="active_nav"><img class="arr" height="10" width="10" src="styles/images/spacer.gif"/>Contact Methods</a>
+                                  <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="subjects.html"><img class="" height="10" width="10" src="styles/images/spacer.gif"/>Web Forms</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                               <li class="sub_head has_children">
+                                   <a href="#"><img class="arr" height="10" width="10" src="styles/images/spacer.gif"/>Appearance Settings</a>
+                                   <div class="bot_sep"></div>
+                               </li>
+                           </ul>   
+                        </div>
+                        <div class="controlbar">     
+
+                        </div>
+                  </div>
+                  <div class="right_content contentarea header_true controlbar_true">
+                      <div id="ac_heading" class="header"> 
+                        <div id="search_ac">
+                           <div class="search_left"></div>
+                           <input class="text search blur" type="text" value="Search.." title="Search.." />
+                           <div class="search_right"></div>
+                        </div>
+                        <a class="btn fr mod_cntmtd">
+                            <span class="inner-btn">
+                                <span class="label"><img class="small_plus_icon" height="16" width="16" src="styles/images/spacer.gif"/>
+                                Add Contact Method
+                                </span>
+                            </span>
+                        </a>
+                        <h4>Contact Methods</h4>
+                        
+                        <div style="clear:right;"></div>
+                     </div>
+                     <div class="contentarea"> 
+                                <ul class="headings">
+                                    <li class="heading_1">Name</li>
+                                    <li class="heading_1">Tickets</li>
+                                    <li class="heading_2" style="width:80px;padding-right:90px;">Status</li>
+                                    <li class="heading_2">Edit</li>
+                                </ul>    
+                                 <div class="p_10" >
+                                    <ul class="form_bars">
+                                       <li style="background-color:#eff8fc;"> 
+                                          <div class="cont_view_mode hide">
+                                          <div class="bar_label">
+                                               <span class="pool_name_label">Email</span>
+                                            </div>
+                                          <div class="bar_tools">
+                                              <span class="ai_status a fl">9550</span>
+                                               <span class="ai_stat">Active</span>
+                                          </div>  
+                                           <div class="modify">
+                                               <a id="edit_contacts" class="edit" href="#"><img class="edit_ico" width="16" height="16" src="styles/images/spacer.gif"/></a>
+                                           </div>
+  										   </div>
+										   <div class="cont_edit_mode">
+												<div class="bar_label">
+												   <input class="pool_name_label" value="Email" />
+											  </div>
+											  <div class="bar_tools">
+											  	  <span class="ai_status a fl">9550</span>
+												   <span class="ai_stat ai_stat_btn">
+																 <ul class="comp_ai active">
+																<li>
+																	<input type="text" class="hide" value="" id=""/>
+																</li>
+															   <li class="selected f">
+																	<a href="#" class="notify">
+																		<span class="nav_r">
+																			 <span class="nav_label">Active</span>
+																		</span>
+																	</a>
+																</li>
+																<li class="l">
+																	<a href="#" class="notify">
+																		<span class="nav_r">
+																			<span class="nav_label">Inactive</span>
+																		</span>
+																	</a>
+																</li>
+													</ul>
+												   </span>
+											  </div>  
+											   <div class="modify">
+                                                <!--<a class="nblu_btn" id="save_btn">
+                                                    <span class="inner-btn">
+                                                        <span class="label edit_cng">Update</span>
+                                                    </span>
+                                            	</a>-->
+                                                <a id="" class="edit_mod_cnt edit_ico" href="#">Update</a>
+												   <a id="cancel_contacts" class="edit_ico cancel_edit" href="#"></a>
+											   </div>
+										   </div>
+                                       </li>
+                                    
+                                      <li>
+                                          
+                                          <div class="bar_label">
+                                               <span class="pool_name_label">Phone</span>
+                                          </div>
+                                          <div class="bar_tools">
+                                              <span class="ai_status a fl">9550</span>
+                                               <span class="ai_stat">Active</span>
+                                          </div>  
+                                           <div class="modify">
+                                               <a class="edit edit_mod_cnt" href="#"><img class="edit_ico" width="16" height="16" src="styles/images/spacer.gif"/></a>
+                                           </div>
+                                      </li>
+                                      <li> 
+                                          <div class="bar_label">
+                                               <span class="pool_name_label">Chat</span>
+                                           </div>
+                                          <div class="bar_tools">
+                                              <span class="ai_status a fl">9550</span>
+                                               <span class="ai_stat">Active</span>
+                                          </div>  
+                                           <div class="modify">
+                                               <a class="edit edit_mod_cnt" href="#"><img class="edit_ico" width="16" height="16" src="styles/images/spacer.gif"/></a>
+                                               
+                                           </div>
+
+                                    </ul>
+                                </div>
+                         </div>
+                         <div class="controlbar">   
+                          
+                         </div>
+                  </div>
+          </div>  
+    </div>
+    
+<!-- pop-up for Contact Method-->  
+
+<div class="mod_box mod_contact" style="display:none">
+<!--[if lte IE 8]> 
+       <div class="s s_t_l"></div><div class="s s_t_m"></div><div class="s s_t_r"></div>
+	   <div class="m s_m_l first_midhgt"></div><div class="m s_m_r first_midhgt"></div>
+	   <div class="s s_b_l"></div><div class="s s_b_m"></div><div class="s s_b_r"></div>
+<![endif]-->
+    
+    <div class="mod_head">
+        <span class="fl pad_left">Add Contact</span>
+        <a class="fr close_but cross close_ui"><img src="styles/images/spacer.gif" width="16" height="16"  /></a>
+      <div style="clear:both" class="clr_all"></div>
+    </div>
+    <div class="mod_cnt">
+    <div style="margin-top:20px;text-align:left">
+        <div class="fl width150"><label for="contact">Contact Method:</label></div>
+        <div class="fl"><input type="text" name="" value="" id="contact" /></div>
+        <div style="clear:both" class="clr_all"></div>
+        <div class="fl width150"><label for="status">Status:</label></div>
+        <div class="fl">
+
+            <ul class="comp_ai active">
+            			<li>
+                            <input type="text" id="" value="" class="hide" />
+                        </li>
+                       <li class="selected f">
+                            <a class="notify" href="#">
+                                <span class="nav_r">
+                                     <span class="nav_label">Active</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="l">
+                            <a class="notify" href="#">
+                                <span class="nav_r">
+                                    <span class="nav_label">Inactive</span>
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+        <div style="clear:both" class="clr_all"></div>
+    </div>
+    </div>
+    <div class="mod_foot">
+  		<span class="pad_right">
+            <a id="cancel_btn" class="btn cross">
+                <span class="inner-btn">
+                    <span class="label">Cancel</span>
+                </span>
+            </a>
+        </span>
+        <a id="save_btn" class="nblu_btn">
+            <span class="inner-btn">
+            	<span class="label edit_cng">Add</span>
+            </span>
+        </a>
+        
+    </div>
+
+</div>
+   
+<!--end pop-up for Add contact Method-->   
+</body>
+</html>

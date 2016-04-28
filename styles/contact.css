@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+.app .fourth_box {
+	left:500px;
+	top:250px;
+}
+
+.app .mod_box .mod_foot{text-align:center;padding:5px 0;border-top:1px solid #B1C0C9;margin:10px;}
+.fourth_midhgt{ height:177px;height:187px !ie;}
+
+
+
+/* .active {
+ background: transparent url(images/icons_sprite.png) no-repeat scroll 0 -626px;
+ border:1px solid red;
+}*/
+

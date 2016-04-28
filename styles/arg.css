@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+.app .main_bars ul.long_bars li.sub_bars{
+     background-color: #c2ccd9; 
+	 /*border-left: 1px solid #bbb;
+	 border-right: 1px solid #bbb;
+	 border-top: 1px solid #bbb;
+	 border-bottom: 1px solid #e2e2e2;*/
+	 border:1px solid #bbb;
+	 margin:10px 10px 0 ;
+	 min-height:30px;
+	 position: relative;
+	/* min-width: 778px;*/
+	 min-width: 775px;
+}
+
+.app .main_bars ul.long_bars li.sub_bars .fst_bar{
+	 color: #6b6b6b;
+	 cursor:default;
+	 font-size: 13px;
+	 font-weight:bold;
+	 left: 10px;
+	 position: absolute;
+	 top: 7px;
+	}
+.app .main_bars ul.long_bars li.sub_bars .scnd_bar{
+	 position: absolute;
+	 right: 12px;
+	 top: 5px;
+}
+.app .main_bars ul.long_bars li.sub_bars .fst_bar img.arr {
+    background: transparent url(images/icons_sprite.png) repeat scroll 0 -318px;
+    height: 12px;
+    width: 12px;	
+}
+.app .main_bars ul.long_bars li.sub_bars .fst_bar img.down_arr {
+     background: url(images/icons_sprite.png) repeat scroll 0 -303px transparent;
+}
+.app .main_bars ul.long_bars li.sub_bars .scnd_bar a.edit{
+    color: #798eaa;
+	font-size: 12px;
+	font-weight:bold;
+	padding-right:12px;	
+	text-decoration:none;	
+}
+.app .main_bars ul.long_bars li.sub_bars .scnd_bar a:hover.edit{
+    color: #5a6f8e;
+}
+.app .main_bars ul.long_bars li.sub_bars .scnd_bar a:active.edit{
+    color: #617188;
+}
+
+.app a img.edit_ico {
+    background: transparent url(images/dashboard_sprite.png) no-repeat scroll 0 -968px;
+}
+.app a:hover img.edit_ico {
+    background-position: 0 -984px;
+}
+.app a:active img.edit_ico {
+    background-position: 0 -1001px;
+}
+.app .main_bars ul.long_bars li.dwn_bar .desc_expand{
+    background-color: #fff;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	color:#4d4d4d;
+	min-height: 210px;
+	margin:0 10px;
+	min-width: 775px;	
+	
+}
+.app .main_bars ul.long_bars li.dwn_bar .desc_expand .mar_pad{
+	margin:0;
+	padding:10px 10px 0;
+}

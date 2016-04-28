@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+.app .form_bars li.pools_1,.app .form_bars li.pools_2{
+	 margin:0;
+     border-bottom:1px solid #ececec;
+	 background:#fbfcfd;}
+.app .form_bars > li:hover.pools_1{
+	background:#fff;
+	}
+.dwn_bar_pools .desc_expand_pools{
+    background-color: #fbfcfd;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	max-width:716px;
+    min-width:560px;
+	max-height:50px;
+	margin-top:-1px;
+	padding:10px;
+    overflow:auto;
+	color:#a8a7a7;
+}
+.app .form_bars > li img.down_arr {
+     background: url(images/icons_sprite.png) repeat scroll 0 -303px transparent;
+}
+
+app .form_bars > li.arrow .bar_label img.down_arr {
+background:url(images/icons_sprite.png) repeat scroll 0 -303px transparent;
+border:1px solid red;
+}
+
+
+.app .form_bars > li.edit_form, .app .form_bars > li.edit_mode:hover {
+	background:#FFFFE8;
+	height:154px;
+}
+.app .form_bars > li.edit_form img.arr { display:none}
+
+.app .form_bars > li.edit_form .bar_label > .pool_name_label{display:none}
+
+.app .form_bars > li.edit_form .bar_tools  > .ai_status{display:none}
+
+ input.label_txt {
+	border:1px solid #d2d2d2;
+	width:200px;
+	background:url(images/button_sprite.png) repeat-x scroll 0 -1670px transparent;
+}
+
+
+
+

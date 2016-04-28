@@ -1,0 +1,378 @@
+/* RFQMS base UI Styles */
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	background-color: #f5f8fc;
+	min-width:1000px;
+	color:#555;
+}
+
+/* @group Global & Resets */
+.app a{
+	text-decoration: none;
+	color: #294870;
+	cursor: pointer;
+	outline:0 none;
+}
+.app a:hover{
+	color: #111;
+	text-decoration: underline;
+}
+.app img, .app a img{border: none}
+
+.app ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.app input[type="text"], .app input.text, .app textarea{
+	font-size: 13px;
+	color: #333;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+.app .fr{
+	float: right;
+	float: right !important;
+}
+.app .fl{
+	float: left;
+	float: left !important;
+}
+.app .grey{color: #9f9f9f;}
+
+.app #header{
+	background:#aecabf url(images/bgsprite.png) repeat-x 0 0px;
+	height: 40px;
+	min-height:40px;
+	min-width:1000px;
+	color: #eee;
+}
+.app #contentarea{
+	min-width:1000px;
+}
+.app .level1{
+   background:#e3eaef;	
+}
+.app .level2{
+   background:#eef3f7;	
+}
+.app .level3{
+   background:#fff;		
+}
+/* @end */
+ 
+/* @group Layout */
+.app #cont_box{
+	position: absolute;
+	/*top: 0;*/ /*removed for adjustment*/
+	top:1px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	/*border: 1px solid #6f7e87;*/ /*removed for adjustment*/
+}
+/*.app #left_nav{
+	_overflow: auto;
+}*/
+.app #ac_heading{
+	top: 0;
+	z-index: 3;
+	background:#748aa6 url(images/bgsprite.png) repeat-x 0 -124px;
+	height: 30px;
+	/*border-top: 1px solid #839e93;*/  /*removed for adjustment*/
+}
+/*.sub_head a img{
+	float:left;
+	cursor: default;
+	margin-top: 4px;
+	border:0 none;
+}*/
+/* @end */ 
+
+#ac_heading h4{
+	padding:5px 0 0 5px; 
+	margin:0; 
+	font-size:15px; 
+	font-weight:bold; 
+	color:#fefefe;
+	text-shadow:0 1px 0 #000000;
+	height:25px;
+}
+
+#ac_heading.catgs{ 
+	padding:5px 0 0 15px; 
+	font-size:15px; 
+	font-weight:bold; 
+	color:#fefefe;
+	text-shadow:0 1px 0 #000000;
+	height:25px;
+}
+ 
+/*search*/
+.app #search_ac{
+	position: relative;
+	float: right;
+	width: 180px;
+	height: 22px;
+	top:3px;
+	margin-right: 15px;
+}
+.app #search_ac .search_left{
+	position: absolute;
+	top: 0;
+	width: 28px;
+	left: 0;
+	height: 22px;
+	background: url(images/button_sprite.png) no-repeat left 0;
+}
+.app #search_ac input.search{
+	background: url(images/button_sprite.png) repeat-x 0 -28px;
+	border: none;
+	color: #111;
+	left: 28px;
+	top: 0;
+	height: 22px;
+	position: absolute;
+	width:132px;
+	font-size:12px;
+	line-height: 13px;
+	padding: 0 10px 0 2px;
+	outline: none;
+	margin: 0;
+	padding-top:5px\9;  /*Hack for ie*/
+	
+}
+.app #search_ac input.blur, .app input.blur{
+	color: #888;
+}
+.app #search_ac .search_right{
+	width: 18px;
+	height: 22px;
+	left:171px;
+	top: 0;
+	position: absolute;
+	display: block;
+	background: url(images/button_sprite.png) no-repeat -17px -56px;
+}
+/*end search*/
+
+/* change of super layout */
+.app.header_true > .contentarea {
+top:40px;
+}
+.app .contentarea.leftcontent_true > .contentarea.left_content {
+background-color:#e3eaef;
+border-right:1px solid #6f7e87;
+left:0;
+right:auto;
+width:210px;
+}
+.app .controlbar {
+background-color:#d4dadf;
+border-top:1px solid #F0F0F0;
+bottom:0;
+height:30px;
+}
+.app .contentarea.controlbar_true > .contentarea {
+border-bottom:1px solid #6f7e87;
+bottom:31px;
+}
+
+.app a img.plus_icon {
+	background:transparent url(images/icons_sprite.png) no-repeat scroll 0 -408px;
+	margin:6px 5px;
+}
+.app .controlbar a:hover img.plus_icon {
+	background:transparent url(images/icons_sprite.png) no-repeat scroll 0 -431px;
+	margin:6px 10px;
+}
+
+/*Header styles*/
+.app #header #logo {
+	background:transparent url(images/btc.png) no-repeat scroll left center;
+	height:38px;
+	overflow:hidden;
+	margin-left:7px;
+	margin-right:10px;
+}
+.app #header a.header_home{
+	display:block;
+}
+.app #header a:hover.header_home #logo img
+{
+	background:url(images/icons_sprite.png) no-repeat 0 -475px;
+}
+.app #header a.header_home #logo{
+	padding-left:180px;
+	width:20px;
+	padding-top:14px;
+	height:24px;
+}
+/*end*/
+
+.app .fl {
+float:left !important;
+}
+
+/*styles for reason codes*/
+
+.app .contentarea.leftcontent_true > .contentarea.left_content_rc{
+	border-right:1px solid #6F7E87;
+	left:0;
+	right:auto;
+	width:294px;
+}
+.app .contentarea.leftcontent_true > .contentarea.center_content_rc{
+	width:309px;
+	left:295px;
+	right:0;
+	border-right:1px solid #6F7E87;
+}
+.app .contentarea.leftcontent_true > .contentarea.right_content_rc{
+	min-width:396px;
+	left:605px;
+}
+.app .contentarea.leftcontent_true > .contentarea.left_content_rc .parent_nav li.has_children a {
+	padding-left:8px;
+}
+.app .parent_nav li.has_children a .count{
+   	padding-left:4px;
+}
+
+.app .parent_nav li.has_children a .categ{ 
+	display:block;
+	width:220px;
+	overflow:hidden;
+	white-space:nowrap;
+	height:16px;
+}
+.app #top_style{
+	top:56px;
+}
+.app .left_content_rc .header,.center_content_rc .header,.right_content_rc .header{
+    height:56px;
+}
+.app .left_content_rc .header{
+  	background:url(images/bgsprite.png) repeat-x 0 -160px;
+}
+.app .left_content_rc .header .search_bg,.app .center_content_rc .header .search_bg,.app .right_content_rc .header .search_bg{
+	background:url(images/bgsprite.png) repeat-x 0 -378px;
+}
+.app .center_content_rc .header{
+   background:url(images/bgsprite.png) repeat-x 0 -224px;	
+}
+.app .right_content_rc .header{
+   background:url(images/bgsprite.png) repeat-x 0 -287px;	
+}
+.app .left_content_rc .header ul li,.center_content_rc .header ul li,.right_content_rc .header ul li{
+	height:28px;
+}
+.app .left_content_rc .contentarea ul.parent_nav li.has_children a,.center_content_rc .contentarea ul.parent_nav li.has_children a,.right_content_rc .contentarea ul.parent_nav li.has_children a{
+    color:#555;	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display:block;
+}
+.app .left_content_rc .contentarea ul.parent_nav li.has_children a.active_nav,.center_content_rc .contentarea ul.parent_nav li.has_children a.active_nav,.right_content_rc .contentarea ul.parent_nav li.has_children a.active_nav{
+    color:#fff;	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display:block;
+}
+.app .left_content_rc .contentarea ul.parent_nav li.has_children a:hover,.center_content_rc .contentarea ul.parent_nav li.has_children a:hover{
+    color:#fff;	
+}
+
+.app .center_content_rc .contentarea ul li:first-child a,.app .right_content_rc .contentarea ul li:first-child a{
+	text-align:center;
+	color:#798EA9;
+}
+.app .right_content_rc .contentarea ul li{
+	height:31px;
+	padding:8px;
+	border-bottom:1px solid #d0d8e3;
+}
+.app .right_content_rc .contentarea ul li:first-child{
+	height:28px;
+	padding:0;
+	border:none;
+}
+.app .right_content_rc .contentarea ul li a .notes{
+	float:right;
+ 	color:#848484;
+	font-size:11px;
+	display:block;
+	position:absolute;
+	right:50px;
+	/*margin-top:-16px;*/
+}
+.app .right_content_rc .contentarea ul li a:hover{
+	background:none;
+	text-shadow:0 1px 0 #F5F5F5;
+}
+.app .center_content_rc .contentarea ul li:first-child a:hover,.right_content_rc .contentarea ul li:first-child a:hover{
+	background:none;
+	color:#798EA9;
+	font-weight:bold;
+	text-shadow:0 1px 0 #F5F5F5;
+}
+.app .left_content_rc h3,.app .center_content_rc h3,.app .right_content_rc h3{
+	/*background:transparent url(images/mail_assets.png) repeat-x scroll 0 -1420px;*/
+	/*color:#444444;*/
+	color:#556375;
+	font-size:14px;
+	font-weight:bold;
+	height:28px;
+	line-height:15px;
+	margin:0;
+	overflow:hidden;
+	padding:6px 2px 4px 6px;
+	text-shadow:0 1px 0 #ECECEC;
+}
+
+.app .parent_nav li:hover.has_children .pencil  {
+	background:transparent url(images/icons_sprite.png) no-repeat 0 -560px;
+	color:#fff;
+/*	margin-left:222px;*/	
+	margin-top:-14px;
+	position:absolute;
+	right:40px;
+}
+
+.app .left_content_rc .contentarea ul.parent_nav li.has_children a:hover .arr,.center_content_rc .contentarea ul.parent_nav li.has_children a:hover .arr{
+	background:url(images/icons_sprite.png) no-repeat 0 -578px;
+	margin-right:4px;
+}
+.app .act_btns a{
+   display:inline-block;
+   cursor:default;
+}
+.app .left_content_rc #search_ac,.app .center_content_rc #search_ac,.app .right_content_rc #search_ac{
+	top:-28px !ie; /*style for ie7	*/
+}
+/*end*/
+
+
+.app a img.delete_ico {
+    background: transparent url(images/icons_sprite.png) no-repeat scroll -2px -592px;
+}
+.app a:hover img.delete_ico{
+    background-position: 0 -608px;
+}
+.app a img.delete_ico:active {
+    background-position: 0 -626px;
+}
+.contentarea ul.parent_nav .head{
+color:#798EA9;
+text-align:center;
+height:30px;
+line-height:30px;
+font-weight:bold;
+overflow:hidden;
+white-space:nowrap;
+/*min-width:100px;*/
+}
+

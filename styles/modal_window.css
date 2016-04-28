@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+.app #middle_box{
+   width: 365px;
+   height: 180px;
+   margin-left: 8px;
+   margin-top: 18px;
+} 
+.app .mod_window{
+	position: relative;
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+}
+.app .total_bg{
+   bottom: 0;
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   z-index: 90;   
+}
+.app h4{
+   background: transparent url(images/bgsprite.png) repeat-x 0 -708px;
+   border-bottom: 1px solid #a3adb9;
+   color: #7d8da0;
+   display: block;
+   font-size: 15px;
+   font-weight: bold;
+   height: 18px;
+   margin-top: 0;
+   padding: 6px 12px;
+   text-shadow: 0 1px 0 #fff;
+   width: 341px;
+   text-align:left;
+}
+.app .reason_bg{
+   background: transparent url(images/mid_modal_bg.png) repeat-x;
+   width: 365px;
+   height: 148px;
+   margin-top: -19px;
+   text-align:left;
+}
+.app .tot_cont{
+	left:16px;
+	position:absolute;
+	right:16px;
+	top:40px;
+}
+.app .tot_cont ul li{
+   padding: 6px;	
+}
+.app .tot_cont ul li label{
+   float: left;
+   width: 136px;  	
+}
+.app .bot_btns{
+   bottom: 0;
+   left: 85px;
+   padding: 4px 0 4px 10px;
+   position: absolute;
+   right: 5px;   
+}
+.app a.close_but{
+   background: url(images/icons_sprite.png) no-repeat -2px -592px;
+}
+.app a:hover.close_but{
+   background-position: 0 -608px;
+}
+.app a:active.close_but{
+   background-position: 0 -626px;
+}
+.app #middle_box .nblu_btn{
+   margin-left: 14px;	
+}
+
+/*my styles*/
+
+.app .mod_box{
+   width: 365px;
+   min-height: 180px;
+   position: relative;
+   -moz-box-shadow: 0 0 10px #000;
+   -webkit-box-shadow: 0 0 10px #000;
+   margin:10px;
+} 
+.app .mod_box .mod_head{
+	height:30px;
+	background: transparent url(images/bgsprite.png) repeat-x 0 -708px;
+	line-height:30px;
+}
+.app .mod_box a.close_but{
+   background: url(images/icons_sprite.png) no-repeat -2px -592px;
+}

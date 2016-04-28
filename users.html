@@ -1,0 +1,1109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Users</title>
+<link rel="shortcut icon" type="image/x-icon" href="styles/images/icon_logo.png" />
+<link href="styles/super_layout.css" rel="stylesheet" type="text/css" />
+<link href="styles/base.css" rel="stylesheet" type="text/css" />
+<link href="styles/left_nav.css" rel="stylesheet" type="text/css" />
+<link href="styles/forms.css" rel="stylesheet" type="text/css" />
+<link href="styles/custom.css" rel="stylesheet" type="text/css" />
+<link href="styles/prim_nav_admin.css" rel="stylesheet" type="text/css" />
+<link href="styles/buttons.css" rel="stylesheet" type="text/css" />
+<link href="styles/components.css" rel="stylesheet" type="text/css" />
+<link href="styles/btc_users.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="styles/modal.css" />
+<script src="library/jquery_1.4.js" type="text/javascript"></script>
+<script src="library/jquery_missingUi.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/interaction.js"></script>
+<script src="library/blockUI.js" type="text/javascript"></script>
+<script language="javascript" src="js/views.js" ></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() { 
+						   
+		    //script for active/inactive tabs
+			act_inact_hftab();
+			
+			//clear search
+			sear_blur();
+        	
+			//active and inactive toggle buttons
+			act_inact_but()
+
+            //users right content tabs
+		    user_rttab();
+		
+		    //script for on/off toggle buttons
+		    on_off_but();
+			
+			//call for moadl window for changing the password
+			mod_pass();
+			
+			//call for unblock ui including button and close img
+			unblock_ui();
+			
+			//call for the assign rights checkboxes
+			assign_check();
+			
+			//call for the Access and Alerts left side checkboxes
+  			access_leftcheck();
+			
+			//call for the Access and Alerts right side checkboxes
+			access_rightcheck();
+		
+		
+		
+		
+
+
+
+/*$(".parent_nav li a").live("click",function(){
+	
+	if($("#changesMade").hasClass("changed"))
+	{	
+		
+		$("#notify_error").slideDown();
+		$("#active_right_content").scrollTo("#notify_error", 500);
+		return false;
+	
+	}
+});
+$("#header ul.nav li > a,.logout").live("click",function(){ 
+if($("#changesMade").hasClass("changed"))
+	{	
+		
+		$("#notify_error").slideDown();
+		$("#active_right_content").scrollTo("#notify_error", 500);
+		return false;
+	
+	}
+});
+
+  $(".usr_details input,.usr_details textarea").live("keyup", function(){
+  $("#changesMade").addClass("changed");
+  
+  });
+  
+  $(".usr_details select").live("click", function(){
+															
+  $("#changesMade").addClass("changed");
+  });*/
+			
+	
+});
+</script>
+
+</head>
+<body class="app header_true">
+<script>
+$.header({index:0});
+</script>
+ <div id="contentarea" class="contentarea main_content"> <!--main content area -->  
+    <div id="cont_box" class="contentarea leftcontent_true">   <!--cont_box contentarea-->          
+        <div class="contentarea header_true"> <!--total contentarea -->             
+              <div class="fst_header">
+            
+                 <a class="btn fr">
+                            <span class="inner-btn">
+                                <span class="label"><img class="small_plus_icon" height="16" width="16" src="styles/images/spacer.gif"/>
+                                Add User
+                                </span>
+                            </span>
+                        </a>
+                 <ul class="comp_ai active mve_lt">
+                   <li>
+                   		<input type="text" id="" value="" class="hide" />
+                   </li>
+                    <li class="f">
+                        <a class="notify" href="#">
+                            <span class="nav_r">
+                                 <span class="nav_label">Admin</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="selected">
+                        <a class="notify" href="#">
+                            <span class="nav_r">
+                                 <span class="nav_label">Ivie</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="l">
+                        <a class="notify" href="#">
+                            <span class="nav_r">
+                                <span class="nav_label">Client</span>
+                            </span>
+                        </a>
+                    </li>
+                  </ul>
+              </div>
+     <div class="contentarea header_true leftcontent_true"> <!--total left contentarea-->
+                     <div class="scnd_header">
+                         <div id="search_ac" style="float:left;margin-top: 2px; width:220px;">
+                             <div class="search_left"></div>
+                                <input class="text search blur" type="text" value="Search.." title="Search.." />
+                             <div class="search_right"></div>
+                         </div>
+                         <div class="filter_sib">
+                                  <div class="usr_type">
+                                         <label for="user" class="ur_nam">User Type:</label>
+                                         <select class="usr_sel" id="user">
+                                               <option>All</option>
+                                               <option>2</option>
+                                               <option>3</option>
+                                               <option>4</option>
+                                         </select>
+                                  </div>
+                                  <div class="dept_type">
+                                         <label for="department" class="ur_nam">Department:</label>
+                                         <select class="usr_sel" id="department">
+                                               <option>All</option>
+                                               <option>2</option>
+                                               <option>3</option>
+                                               <option>4</option>
+                                         </select>
+                              </div>
+                         </div>
+                      </div>
+                       <div class="contentarea controlbar_true left_content">                           
+                          <div class="contentarea usr_list">  
+                            <ul>                         
+                               <li>
+                                 <a class="click_data active_long" href="#">
+                                  <img class="photo_ico" src="styles/images/spacer.gif" width="38" height="38" style="border:1px solid #ccc;" />
+                                    <div class="ppl_det">
+                                       <div class="ppl_name">
+                                          Angela Randolph
+                                       </div>
+                                       <div class="ppl_comp">
+                                          Sally Employee, Ask Sally
+                                       </div>
+                                    </div>
+                                    <div style="clear:left"></div>
+                                  </a>
+                               </li>
+                               <li>
+                                 <a class="click_data" href="#">
+                                  <img class="photo_ico" src="styles/images/spacer.gif" width="38" height="38" style="border:1px solid #ccc;" />
+                                   <div class="ppl_det">
+                                       <div class="ppl_name">
+                                          Kailex Patel Kailex Patel Kailex Patel
+                                       </div>
+                                       <div class="ppl_comp">
+                                          Sally Manager, Distrubution Sally Manager, Distrubution
+                                       </div>
+                                    </div>
+                                  <div style="clear:left"></div>
+                                 </a>
+                               </li>
+                               <li>
+                                 <a class="click_data" href="#">
+                                  <img class="photo_ico" src="styles/images/spacer.gif" width="38" height="38" style="border:1px solid #ccc;" />
+                                   <div class="ppl_det">
+                                       <div class="ppl_name">
+                                          Micheal Breeding
+                                       </div>
+                                       <div class="ppl_comp">
+                                          Sally Manager, MIS
+                                       </div>
+                                    </div>
+                                   <div style="clear:left"></div>
+                                  </a>
+                               </li>
+                           </ul>             
+                       </div>
+                          <div class="controlbar">  
+                           <div class="act_btns">
+                               <a href="#" class="ac_btn actv act_usr">
+                                    <span class="inner_btn">
+                                        <span class="label">
+                                             Active
+                                        </span>
+                                    </span>
+                                </a>
+                                <a href="#" class="inac_btn inact_usr">
+                                     <span class="inner_btn">
+                                        <span class="label">
+                                             Inactive
+                                        </span>
+                                    </span>
+                                </a>
+                           </div>
+                          </div>
+                       </div>
+              <div class="contentarea controlbar_true right_content leftright50_true" id="two_prt"> <!--two parts of left contentarea -->
+                        <div class="contentarea left_content usr_details">                          
+                          <form>
+                            <ul class="fst_det">
+                                <li class="usr_det">
+                                  <img class="indi_photo_ico" src="styles/images/spacer.gif" width="56" height="56" style="border:1px solid #ccc;" />           
+                                </li>                                                        
+                                <li class="usr_det fst_prt">
+                                   <div>
+                                      <label for="fname">First Name</label> 
+                                   </div>                                         
+                                   <div>
+                                      <input type="text" class="fst_nm shrt_text" value=""  id="fname"/>
+                                   </div>
+                                 </li>
+                                 <li class="usr_det">
+                                    <div>
+                                       <label for="lname">Last Name</label> 
+                                    </div>
+                                    <div>
+                                       <input type="text" class="lst_nm shrt_text" value=""  id="lname"/>
+                                    </div>
+                                 </li>
+                                 <div style="clear:left"></div>
+                              </ul>
+                              <ul class="all_det">
+                                  <li class="use_det">
+                                    <label for="username">Username:</label>
+                                    <input type="text" name="" value="" id="username" />
+                                  </li>
+                                  <li class="use_det">
+                                    <label for="password">Password:</label>
+                                    <input type="password" name="" value="" id="password" />
+                                    <label class="pass_rem"><a href="#" class="pass_mod">Reset Password</a></label>
+                                  </li>
+                                  <li class="use_det">
+                                    <label for="email">Email:</label>
+                                    <input type="text" name="" value="" id="email" />
+                                  </li>
+                                 <li class="sub_det">
+                                     <label class="usr_typ">User Type:</label>
+                                     <select>
+                                           <option>Sally Manager</option>
+                                           <option>2</option>
+                                           <option>3</option>
+                                           <option>4</option>
+                                     </select>
+                                 </li>
+                                 <li class="sub_det">
+                                     <label class="deprtmt">Department:</label>
+                                     <select>
+                                           <option>Sally Manager</option>
+                                           <option>2</option>
+                                           <option>3</option>
+                                           <option>4</option>
+                                     </select>
+                                 </li>
+                                 <li class="sub_det">
+                                     <label class="status">Status:</label>
+                                       <ul class="comp_ai active">
+                                           <li>
+                                                <input type="text" id="" value="" class="hide" />
+                                           </li>
+                                           <li class="selected f"> 
+                                                <a class="notify" href="#">
+                                                    <span class="nav_r">
+                                                   		 <span class="nav_label">Active</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="l">
+                                                <a class="notify" href="#">
+                                                    <span class="nav_r">
+                                                    	<span class="nav_label">Inactive</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                       </ul>
+                                 </li>
+                             </ul>
+                           </form>                        
+                        </div>                       
+                  <div class="contentarea right_content header_true usr_access">   
+                          <div id="active_right_right_header" class="header"> <!--Place the right header content here -->
+                             <ul class="horizontal_tab">
+                            	<li><a href="#" class="" rel="tot_perms">Permissions</a></li>
+                                <li><a href="#" class="" rel="tot_assgn_alrt">Access and Alerts</a></li>
+                                <li><a href="#" class="" rel="total_acc_alts">Assign Rights</a></li>
+                             </ul>
+                          </div>  
+                 <!--permission part-->
+                     <div class="contentarea same_cl"  id="tot_perms">
+                        <div class="all_permisn">
+                             <ul class="pool_fst_prt">
+                                   <li>
+                                       <label>Create Ticket:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                         <ul class="tog_btn active_tog" style="margin-bottom: 9px;">
+                                        	<li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li>                                        
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Modify Customer Info:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                            <li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li>  
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Modify Store Info:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                            <li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Modify Description:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                            <li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Update Reason Codes:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                            <li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Update Hot Flag:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                           <li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Track Ticket:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                            <li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Reopen Ticket:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                        	<li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Close Ticket:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                        	<li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                            </ul>
+                             
+                             <ul class="pool_sec_prt">
+                                     <li class="view_arg">
+                                       <label for="">View ARG:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                        	<li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Update ARG:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                       		<li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                            </ul>  
+                          
+                             <ul class="pool_trd_prt">
+                                     <li class="cc_some">
+                                       <label for="">CC Someone:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                       		<li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                       <label for="">Notify Customer:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                            <li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                            </ul>
+                           
+                             <ul class="pool_frt_prt">
+                                    <li class="resgn_tic">
+                                       <label for="">Reassign From All Open Tickets:</label>
+                                       <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                         <ul class="tog_btn active_tog">
+                                         	<li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                           <li class="selected f">
+                                            <a href="#" class="tog_act">
+                                              <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                   </li>
+                                   <li>
+                                      <label for="">Reply to Customer:</label>
+                                      <img src="styles/images/spacer.gif" width="16" height="16" class="info"  />
+                                        <ul class="tog_btn active_tog">
+                                       		<li>
+                                       		  <input type="text" id="" value="" class="hide" />
+                                       	    </li> 
+                                          <li class="selected f">
+                                            <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  ON
+                                                </span>
+                                             </span>
+                                            </a>
+                                           </li>
+                                           <li class="l">
+                                           <a href="#" class="tog_act">
+                                             <span class="nav_r">
+                                                <span class="nav_label">
+                                                  OFF
+                                                </span>
+                                             </span>
+                                           </a>
+                                           </li>
+                                        </ul>
+                                 </li>
+                            </ul>                            
+                        </div>
+                     </div>
+                 <!--end of permission part-->    
+                 
+                  <!--access and alerts-->
+                        <div class="contentarea header_true leftcontent_true same_cl"  id="tot_assgn_alrt">   
+                             <div class="header aces_alts">
+                                      <ul class="hd_prt">
+                                        <li class="hd_prt_1">Access</li>
+                                        <li class="hd_prt_1 lng_dt">Departments/Users</li>
+                                        <li class="hd_prt_1">Alerts</li>
+                                        <div style="clear:left"></div>
+                                      </ul>
+                               </div>
+                             <div id="access_l" class="contentarea sally_dept" ><!--start of right parts -->
+                                 <div class="acc_header">
+                                    <img src="styles/images/spacer.gif" class="big_minus minus" width="14px" height="14px" />
+                                    <span class="al_pl"> Sally Departmets </span>
+                                 </div>
+                                    <ul class="sally_con upper_part" id="ap_0">
+                                               <form>
+                                                   <li>
+                                                        <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> SSG </label> 
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Beauty Club Cards </label>
+                                                   </li>
+                                                   <li  class="active">
+                                                       <div class="grey_col active"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                       <label> Beauty Schools </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Cancel Order Request </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Card Servicess </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Cosmotics, Skincare </label> 
+                                                   </li>
+                                                   <li>
+                                                      <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Coupons/Rebate </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Direct Mail </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Distribution </label>
+                                                   </li>
+                                                   
+                                               </form>
+                                            </ul>
+                                  
+                                  <div class="acc_header">
+                                    <img src="styles/images/spacer.gif" class="big_minus minus" width="14px" height="14px" />
+                                    <span class="al_pl"> Ivie Departmets </span>
+                                  </div>
+                                  <ul class="sally_con lower_part" id="ap_1">
+                                               <form>
+                                                   <li>
+                                                        <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> SSG </label> 
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Beauty Club Cards </label>
+                                                   </li>
+                                                   <li >
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                       <label> Beauty Schools </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Cancel Order Request </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Card Servicess </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Cosmotics, Skincare </label> 
+                                                   </li>
+                                                   <li>
+                                                      <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Coupons/Rebate </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Direct Mail </label>
+                                                   </li>
+                                                   <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Distribution </label>
+                                                   </li>
+                                                    <li>
+                                                       <div class="grey_col"><input type="checkbox" class="chec" name="" value=""/></div>
+                                                        <label> Distribution </label>
+                                                   </li>
+                                                   
+                                               </form>
+                                            </ul>
+                                  
+                             </div><!-- end of left parts -->
+                             <div id="access_r" class="contentarea header_true dept_desp" >
+                               <div class="header alrt_header">
+                                              Beauty Schools
+                                           </div>
+                                           <ul class="contentarea sally_con" >
+                                              <form>
+                                                  <li>
+                                                       <img src="styles/images/spacer.gif" class="small_minus" width="16px" height="16px" />
+                                                       <span class="al_alt"> All Alerts </span>
+                                                   </li>
+                                                   <li>
+                                                       <input type="checkbox" class="check_right" name="" value="" />
+                                                       Hourly Pool Alert
+                                                   </li>
+                                                   <li>
+                                                       <input type="checkbox" class="check_right" name="" value="" />
+                                                       10am - 2pm Alert
+                                                   </li>
+                                               </form>
+                                            </ul>
+                            
+                             </div><!-- end of right parts -->     
+                                   
+                           </div>
+                <!-- end of access and alerts -->                        
+                             
+                 <!--assign rights -->  
+                       <div class="contentarea same_cl" id="total_acc_alts">    
+                           <div class="asign_rts">
+                               <h4>Sally Departments</h4>
+                                  <ul class="header_nm">
+                                    <li class="header_nm_1">Assign</li>
+                                    <li class="header_nm_1">Departments/Users</li>
+                                    <div style="clear:left"></div>
+                                  </ul>
+                              </div>
+                          
+                          <div class="assign_content" >    
+                                 <div class="sally_content" id="sc_0">   
+                                             <div class="sal_dep">
+                                                <div class="check_det fl">
+                                                    <img class="big_minus assign_minus" src="styles/images/spacer.gif" width="14px" height="14px" />
+                                                 </div>
+                                                 <div class="dep_det fl">
+                                                    Ask Sally
+                                                 </div>
+                                                 <div class="num_user">
+                                                    3 Users
+                                                 </div>
+                                                <div style="clear:left;"></div>
+                                              </div>
+                                              <div class="expand_dept">
+                                                  <ul>
+                                                       <li>  
+                                                          <div class="check_bx fl">
+                                                              <input type="checkbox" class="check_rite" value=""/>
+                                                          </div>
+                                                          <div class="dep_subname">
+                                                             Anand Shah
+                                                          </div>
+                                                       </li>
+                                                       <li>  
+                                                          <div class="check_bx fl">
+                                                              <input type="checkbox" class="check_rite" value=""/>
+                                                          </div>
+                                                          <div class="dep_subname">
+                                                             Danderson
+                                                          </div>
+                                                       </li>
+                                                       <li>  
+                                                          <div class="check_bx fl">
+                                                              <input type="checkbox" class="check_rite" value=""/>
+                                                          </div>
+                                                          <div class="dep_subname">
+                                                             Lupe Rojass
+                                                          </div>
+                                                       </li>
+                                                      <div style="clear:left;"></div>
+                                                   </ul>
+                                              </div>
+                                      </div>                                                     
+                                   
+                                 <div class="sally_content" id="sc_1">  
+                                        <div class="sal_dep">
+                                            <div class="check_det fl">
+                                                <img class="big_minus assign_minus" src="styles/images/spacer.gif" width="14px" height="14px" />
+                                             </div>
+                                             <div class="dep_det fl">
+                                                Beauty Club Cards
+                                             </div>
+                                             <div class="num_user">
+                                                 3 Users
+                                             </div>
+                                            <div style="clear:left;"></div>
+                                          </div>
+                                          <div class="expand_dept">
+                                               <ul>
+                                                   <li>  
+                                                      <div class="check_bx fl">
+                                                          <input type="checkbox" class="check_rite" value=""/>
+                                                      </div>
+                                                      <div class="dep_subname">
+                                                         Anand Shah
+                                                      </div>
+                                                   </li>
+                                                   <li>  
+                                                      <div class="check_bx fl">
+                                                          <input type="checkbox" class="check_rite" value=""/>
+                                                      </div>
+                                                      <div class="dep_subname">
+                                                         Danderson
+                                                      </div>
+                                                   </li>
+                                                   <li>  
+                                                      <div class="check_bx fl">
+                                                          <input type="checkbox" class="check_rite" value=""/>
+                                                      </div>
+                                                      <div class="dep_subname">
+                                                         Lupe Rojass
+                                                      </div>
+                                                   </li>
+                                                 <div style="clear:left;"></div>
+                                               </ul> 
+                                          </div>   
+                                 </div>
+                                 
+                                 <div class="sally_content" id="sc_2">                        
+                                       <div class="sal_dep">
+                                            <div class="check_det fl">
+                                                    <img class="big_minus assign_minus" src="styles/images/spacer.gif" width="14px" height="14px" />
+                                             </div>
+                                             <div class="dep_det fl">
+                                                Beauty Club School
+                                             </div>
+                                             <div class="num_user">
+                                                 3 Users
+                                             </div>
+                                            <div style="clear:left;"></div>
+                                          </div>
+                                          <div class="expand_dept">
+                                               <ul>
+                                                   <li>  
+                                                      <div class="check_bx fl">
+                                                          <input type="checkbox" class="check_rite" value=""/>
+                                                      </div>
+                                                      <div class="dep_subname">
+                                                         Anand Shah
+                                                      </div>
+                                                   </li>
+                                                   <li>  
+                                                      <div class="check_bx fl">
+                                                          <input type="checkbox" class="check_rite" value=""/>
+                                                      </div>
+                                                      <div class="dep_subname">
+                                                         Danderson
+                                                      </div>
+                                                   </li>
+                                                   <li>  
+                                                      <div class="check_bx fl">
+                                                          <input type="checkbox" class="check_rite" value=""/>
+                                                      </div>
+                                                      <div class="dep_subname">
+                                                         Lupe Rojass
+                                                      </div>
+                                                   </li>
+                                                  <div style="clear:left;"></div>
+                                               </ul>
+                                          </div>   
+                                   </div>
+                               </div>   
+                        </div>
+                <!--end of assign rights-->
+                           
+                
+                       
+               </div>
+         
+                  <!-- start of controll bar   -->
+                       <div class="controlbar">     
+                           <a id="cancel_btn" class="btn">
+                              <span class="inner-btn">
+                                  <span class="label">Cancel</span>
+                              </span>
+                           </a>
+                           <a id="save_btn" class="nblu_btn" >
+                               <span class="inner-btn">
+                                  <span class="label">Save Changes</span>
+                               </span>
+                           </a>                           
+                      </div>
+                 </div>
+                  <!-- start of controll bar   -->
+            </div>   <!--end of two parts of left contentarea-->
+         </div>    <!--end of total left contentarea   -->                
+       </div>   <!--end of total contentarea-->
+    </div>  <!--end of cont_box area-->
+ </div> <!--end of main contentarea-->
+ 
+  <div class="mod_box second_box" style="display:none;">
+
+ <!--[if lte IE 8]> 
+       <div class="s s_t_l"></div><div class="s s_t_m"></div><div class="s s_t_r"></div>
+	   <div class="m s_m_l second_midhgt"></div><div class="m s_m_r  second_midhgt"></div>
+	   <div class="s s_b_l"></div><div class="s s_b_m"></div><div class="s s_b_r"></div>
+ <![endif]-->
+    
+    <div class="mod_head">
+        <span class="fl pad_left">Reset Password</span>
+        <a class="fr close_but cross close_ui"><img src="styles/images/spacer.gif" width="16" height="16"  /></a>
+      <div style="clear:both" class="clr_all"></div>
+    </div>
+    <div class="mod_cnt">
+        <div style="margin-top:20px;text-align:left">
+            
+            <div class="fl width150"><label for="sub_category">Password:</label></div>
+            <div class="fl"><input type="text" name="" value="" id="sub_category" /></div>
+            <div style="clear:both" class="clr_all"></div>
+            
+            <div class="fl width150"><label for="sub_category">New Password:</label></div>
+            <div class="fl"><input type="text" name="" value="" id="sub_category" /></div>
+            <div style="clear:both" class="clr_all"></div>
+            
+            <div class="fl width150"><label for="sub_category">Confirm Password:</label></div>
+            <div class="fl"><input type="text" name="" value="" id="sub_category" /></div>
+            <div style="clear:both" class="clr_all"></div>
+            
+        </div>
+    </div>
+    <div class="mod_foot">
+    <span class="pad_right">
+        <a id="cancel_btn" class="btn cross">
+            <span class="inner-btn">
+            	<span class="label">Cancel</span>
+            </span>
+        </a>
+        </span>
+        <a id="save_btn" class="nblu_btn">
+            <span class="inner-btn">
+            	<span class="label edit_cng">Change</span>
+            </span>
+        </a>
+    </div>
+
+</div>
+
+   
+   <!--end of sub-categories modal window-->
+   
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,318 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**start: active/inactive componet**/
+
+.app ul.mve_lt{
+	margin:0 auto;
+	padding-top:4px;
+	text-align:center;
+	width:266px;
+}
+
+.app ul.comp_ai.mve_lt.active li a > span > span.nav_label {
+	min-width:60px;
+}
+
+.app ul.comp_ai.mve_lt.active li.selected a > span >  span.nav_label {
+	min-width:60px;
+}
+
+.app ul.comp_ai li{
+	float: left;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.app ul.comp_ai li a, .app ul.comp_ai li a > span, .app ul.comp_ai li a > span > span,
+.app ul.comp_ai li.selected a, .app ul.comp_ai li.selected a > span, .app ul.comp_ai li.selected a > span > span{
+	background:url(images/button_sprite.png) no-repeat right -1190px;
+}
+.app ul.comp_ai li a{
+	color: #5f5f5f;
+	outline: none;
+	margin-right: 0px;
+	background-position:0 -1157px;
+	cursor: default;
+	text-shadow: 0 1px 0 #fafafa;
+	padding-left: 5px;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: 14px;
+	height: 24px;
+}
+.app ul.comp_ai li a > span.nav_r{
+	background-position: right -1157px;
+	padding-right: 4px;
+	display: block;
+}
+.app ul.comp_ai li a > span > span.nav_label{
+	background-position:0 -1157px;
+	background-repeat: repeat-x;
+	display: block;
+	padding: 2px 10px;
+	text-shadow: 0 1px 0 #;
+	min-width: 26px;
+	height: 24px;
+}
+.app ul.comp_ai.active li.f a{
+	background-position: 0 -1095px;
+	height: 24px;
+	padding-left: 4px;
+}
+.app ul.comp_ai.active li a > span.nav_r{
+	background-position:right -1157px;
+}
+.app ul.comp_ai.active li a > span > span.nav_label{
+	background-position:0 -1157px;
+	background-repeat: repeat-x;
+	color: #646e7b;
+	min-width: 26px;
+	height: 17px;
+	padding-top: 5px;
+	font-size: 13px;
+}
+.app ul.comp_ai.active li a:hover{
+	text-decoration: none;
+	
+}
+.app ul.comp_ai.active li.selected a{
+	color: #fff !important;
+	background-position: 0 -1251px;
+	text-shadow: 0 1px 0 #242a3e;
+	height: 24px;
+}
+.app ul.comp_ai.active li.selected.f a{
+	background-position:0 -1189px;
+	height:24px;
+	padding-left: 4px;
+}
+.app ul.comp_ai.active li.selected  a > span.nav_r{
+	background-position:right -1251px;
+}
+.app ul.comp_ai.active li.selected.l  a > span.nav_r{
+	background-position: right -1220px;	
+}
+.app ul.comp_ai.active li.selected  a > span > span.nav_label{
+	background-position:0 -1251px;
+	background-repeat: repeat-x;
+	min-width: 26px;
+	height: 17px;
+	padding-top: 5px;
+    color: #fff;
+}
+.app ul.comp_ai li.f a{
+	background-position: 0 -1157px;
+	height: 24px;
+}
+.app ul.comp_ai li.l a > span.nav_r{
+	background-position: right -1126px;
+	height: 24px;
+}
+/**end: active/inactive componet**/
+/**start styles of permission toggle buttons**/
+.app ul.tog_btn li{
+	float: left;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.app ul.tog_btn li a, .app ul.tog_btn li a > span, .app ul.tog_btn li a > span > span,
+.app ul.tog_btn li.selected a, .app ul.tog_btn li.selected a > span, .app ul.tog_btn li.selected a > span > span{
+	background:url(images/button_sprite.png) no-repeat right -1468px;
+}
+.app ul.tog_btn li a{
+	color: #5f5f5f;
+	outline: none;
+	margin-right: 0px;
+	background-position:0 -1543px;
+	cursor: default;
+	text-shadow: 0 1px 0 #fafafa;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: 14px;
+	height: 19px;
+}
+.app ul.tog_btn li a > span.nav_r{
+	background-position: right -1543px;
+	padding-right: 4px;
+	display: block;
+}
+.app ul.tog_btn li a > span > span.nav_label{
+	background-position:0 -1544px;
+	background-repeat: repeat-x;
+	display: block;
+	padding: 2px 10px;
+	text-shadow: 0 1px 0 #;
+	min-width: 16px;
+	height: 19px;
+}
+.app ul.tog_btn.active_tog li.f a{
+	background-position: 0 -1570px;
+	height: 19px;
+	padding-left: 4px;
+}
+.app ul.tog_btn.active_tog li a > span.nav_r{
+	background-position:right -1544px;
+}
+.app ul.tog_btn.active_tog li a > span > span.nav_label{
+	background-position:0 -1544px;
+	background-repeat: repeat-x;
+	color: #646e7b;
+	min-width: 15px;
+	height: 19px;
+    font-size: 11px;
+	font-weight: bold;
+	padding-top: 2px;
+}
+.app ul.tog_btn.active_tog li a:hover{
+	text-decoration: none;
+	
+}
+.app ul.tog_btn.active_tog li.selected a{
+	color: #fff !important;
+	background-position: 0 -1496px;
+	text-shadow: 0 1px 0 #242a3e;
+	height: 19px;
+}
+.app ul.tog_btn.active_tog li.selected.f a{
+	background-position:0 -1469px;
+	height: 19px;
+	padding-left: 4px;
+}
+.app ul.tog_btn.active_tog li.f.selected  a > span.nav_r{
+	background-position:right -1496px;
+}
+.app ul.tog_btn.active_tog li.selected.l  a > span.nav_r{
+	background-position: right -1646px;	
+}
+.app ul.tog_btn.active_tog li.selected  a > span > span.nav_label{
+	background-position:0 -1496px;
+	background-repeat: repeat-x;
+	min-width: 16px;
+	height: 19px;
+    color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	padding-top: 2px;
+}
+.app ul.tog_btn li.f a{
+	background-position: 0 -1543px;
+	height: 19px;
+}
+.app ul.tog_btn li.l a > span.nav_r{
+	background-position: right -1521px;
+	height: 19px;
+}
+/**end styles of permission toggle buttons**/
+
+/**toggle button styles for modal window reason codes**/
+.app ul.modl_ai{ 
+	/*display: inline;*/
+}
+.app ul.modl_ai li{
+	float: left;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.app ul.modl_ai li a, .app ul.modl_ai li a > span, .app ul.modl_ai li a > span > span,
+.app ul.modl_ai li.selected a, .app ul.modl_ai li.selected a > span, .app ul.modl_ai li.selected a > span > span{
+	background:url(images/button_sprite.png) no-repeat right -372px;
+}
+.app ul.modl_ai li a{
+	color: #5f5f5f;
+	outline: none;
+	margin-right: 0px;
+	background-position:0 -497px;
+	cursor: default;
+	text-shadow: 0 1px 0 #fafafa;
+	padding-left: 5px;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 11px;
+	line-height: 14px;
+	height: 20px;
+}
+.app ul.modl_ai li a > span.nav_r{
+	background-position: right -498px;
+	padding-right: 4px;
+	display: block;
+}
+.app ul.modl_ai li a > span > span.nav_label{
+	background-position:0 -498px;
+	background-repeat: repeat-x;
+	display: block;
+	padding: 2px 10px;
+	text-shadow: 0 1px 0 #;
+	min-width: 26px;
+	height: 20px;
+}
+.app ul.modl_ai.active li.f a{
+	background-position: 0 -447px;
+	height: 20px;
+	padding-left: 4px;
+}
+.app ul.modl_ai.active li a > span.nav_r{
+	background-position:right -498px;
+}
+.app ul.modl_ai.active li a > span > span.nav_label{
+	background-position:0 -497px;
+	background-repeat: repeat-x;
+	color: #555657;
+	min-width: 26px;
+	height: 17px;
+	padding-top: 3px;
+	font-size: 12px;
+}
+.app ul.modl_ai.active li a:hover{
+	text-decoration: none;
+	
+}
+.app ul.modl_ai.active li.selected a{
+	color: #fff !important;
+	background-position: 0 -422px;
+	text-shadow: 0 1px 0 #242a3e;
+	height: 20px;
+}
+.app ul.modl_ai.active li.selected.f a{
+	background-position:0 -371px;
+	height: 20px;
+	padding-left: 4px;
+}
+.app ul.modl_ai.active li.selected  a > span.nav_r{
+	background-position:right -422px;
+}
+.app ul.modl_ai.active li.selected.l  a > span.nav_r{
+	background-position: right -398px;	
+}
+.app ul.modl_ai.active li.selected  a > span > span.nav_label{
+	background-position:0 -422px;
+	background-repeat: repeat-x;
+	min-width: 26px;
+	height: 17px;
+	padding-top: 3px;
+    color: #fff;
+}
+.app ul.modl_ai li.f a{
+	background-position: 0 -498px;
+	height: 20px;
+}
+.app ul.modl_ai li.l a > span.nav_r{
+	background-position: right -472px;
+	height: 20px;
+}
+/**end of toggle button styles for modal window reason codes**/
+
+
+/*.parent_nav .sub_head img.penc{
+	background:transparent url(images/icons_sprite.png) no-repeat 0 -560px;
+	margin-top:2px;
+	margin-right:5px;
+}*/
+.app .right_content_rc .contentarea ul li:hover{
+	background:#f5f5f5;
+}
+
+.app .right_content_rc .contentarea ul li:hover a img.penc{
+	background:url(images/icons_sprite.png) no-repeat 0 -560px;
+}

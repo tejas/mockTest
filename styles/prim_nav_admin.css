@@ -1,0 +1,196 @@
+
+@charset "utf-8";
+/* Added by Sharmila for Admin Header fixes*/
+/* @group Menu Nav */
+
+.app #header{
+	background:#aecabf url(images/bgsprite.png) repeat-x 0 0px;
+	height: 40px;
+	min-height:40px;
+	min-width:1000px;
+	color: #eee;
+}
+
+.app #header{
+	border-bottom:1px solid #888
+}
+/*Overwriting custom for admin*/
+.app > .contentarea#contentarea{
+	margin-top:0;
+}
+.app ul.nav{
+	padding:0;
+	height:40px;
+	border-right:1px solid #b7cfc7 !ie;
+}
+ul.nav li{
+	float: left;
+}
+ul.nav li a{
+	color: #38604d;
+	font-size: 14px;
+	text-shadow: 0 1px 0 #d3e9e0 ;
+	display: block;
+	padding:13px 8px 3px;
+	/*padding-top:10px !ie;*/
+	line-height: 18px;
+	height:23px;
+	text-decoration: none;
+	outline: none;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	border-left:1px solid #b7cfc7;
+	border-right:1px solid #8faea2;
+}
+
+ul.nav li:first-child{
+	border-left:1px solid #b7cfc7;
+}
+ul.nav li:first-child a{
+	border-left-color: #8faea2;
+}
+ul.nav li:last-child{
+	border-right:1px solid #8faea2;
+}
+ul.nav li:last-child a{
+	border-right-color: #b7cfc7;
+}
+ul.nav li a img{
+	width: 16px;
+	height: 16px;
+	margin-bottom:-1px;
+	margin-right:5px;
+	outline:none;
+}
+ul.nav li a:hover{
+	color: #184032;
+	text-decoration: none;
+}
+ul.nav li.current_page a{
+	background: url(images/bgsprite.png) repeat-x 0 -46px; ;
+	text-shadow: #fff 1px 1px 0;
+}
+ul.nav li.current_page a,ul.nav li.current_page a:hover{
+	color:#507e68;
+}
+ul.nav li a img.forms{
+	background:url(images/icons_sprite.png) no-repeat 0 0;
+}
+ul.nav li a:hover img.forms{
+	background-position: -25px 0;
+}
+ul.nav li a img.reason_codes{
+    background:url(images/icons_sprite.png) no-repeat 0 -40px;
+}
+ul.nav li a:hover img.reason_codes{
+   background-position: -24px -40px;
+}
+ul.nav li a img.arg{
+    background:url(images/icons_sprite.png) no-repeat 0 -84px;
+}
+ul.nav li a:hover img.arg{
+    background-position: -24px -84px;
+}
+ul.nav li a img.tickets{
+    background:url(images/icons_sprite.png) no-repeat 0 -133px;
+}
+ul.nav li a:hover img.tickets{
+    background-position: -24px -133px;
+}
+ul.nav li a img.reports{
+    background:url(images/icons_sprite.png) no-repeat 0 -177px;
+}
+ul.nav li a:hover img.reports{
+    background-position: -24px -177px;
+}
+ul.nav li a img.system_tools{
+    background:url(images/icons_sprite.png) no-repeat 0 -220px;
+}
+ul.nav li a:hover img.system_tools{
+    background-position: -24px -220px;
+}
+
+
+ul.nav li.current_page a img.forms{
+	background: url(images/icons_sprite.png)  no-repeat 0 -20px;
+}
+ul.nav li.current_page a img.reason_codes{
+	background:url(images/icons_sprite.png) no-repeat 0 -62px;
+}
+ul.nav li.current_page a img.arg{
+	 background:url(images/icons_sprite.png) no-repeat 0 -106px;
+}
+ul.nav li.current_page a img.tickets{
+	background:url(images/icons_sprite.png) no-repeat 0 -155px;
+}
+ul.nav li.current_page a img.reports{
+	 background:url(images/icons_sprite.png) no-repeat 0 -198px;
+}
+ul.nav li.current_page a img.system_tools{
+	background:url(images/icons_sprite.png) no-repeat 0 -242px;
+}
+
+ul.nav li.login_align{
+	 margin-top:5px;
+	 margin-right:10px;
+	/* max-width:100px;
+	 overflow:hidden;
+	 white-space:nowrap;
+	 text-overflow: ellipsis;*/
+}
+ul.nav  #bor_colp{
+ 	border:0 none;
+ }
+ul.nav li.login_align .user{
+	color:#484848;
+	display:block;
+    font-size:13px;
+	max-width:100px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+}
+ul.nav li.login_align .designation{
+	color:#676666;
+	display:block;
+	font-size:11px;
+	max-width:100px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+ul.nav li.logout_inf{
+	width:60px; 
+	height:40px;
+}
+.app a.logout_icon{
+	display:block;
+    color:#676666;
+}
+
+/* @end */
+
+ul.nav li a.log_out{
+	display: block;
+	padding: 5px 0 0 3px;
+	border-right: none;
+	font-size:11px;
+	text-align:center
+}
+ul.nav li a.log_out > img{
+	background:url(images/icons_sprite.png) no-repeat 0 -267px;
+	display:block;
+	margin:0 auto -2px;
+}
+ul.nav li a.log_out:hover{
+	color:#000;
+}
+ul.nav li a.log_out:hover > img{
+	background-position: -26px -267px;
+}
+ul.nav li a.log_out:active{
+	color:#555;
+}
+ul.nav li a.log_out:active > img{
+	background-position: 0 -287px;
+}
